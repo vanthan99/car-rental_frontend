@@ -33,6 +33,6 @@ export function App() {
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 }
