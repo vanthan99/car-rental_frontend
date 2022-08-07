@@ -15,13 +15,18 @@ import { GlobalStyle } from 'styles/global-styles';
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
+import { MainLayout } from './layouts/MainLayout';
+import { GoogleMapExtenstion } from './components/GoogleMapExtenstion/Loadable';
+import { Footer } from './components/Footer';
+import { AdminLayout } from './layouts';
+import { AdminNotFoundPage } from './components/AdminNotFoundPage';
 
 export function App() {
   const { i18n } = useTranslation();
   return (
     <BrowserRouter>
       <Helmet
-        titleTemplate="%s - React Boilerplate"
+        titleTemplate="%s - Thân Test"
         defaultTitle="React Boilerplate"
         htmlAttributes={{ lang: i18n.language }}
       >
@@ -29,7 +34,23 @@ export function App() {
       </Helmet>
 
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path={['/admin*']}>
+          <AdminLayout>
+            <Switch>
+              <Route exact path="/admin" component={Footer} />
+              <Route component={AdminNotFoundPage} />
+            </Switch>
+          </AdminLayout>
+        </Route>
+        {/* <Route component={NotFoundPage} /> */}
+        <Route exact path={['/', '/about']}>
+          <MainLayout>
+            <Switch>
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/about" component={GoogleMapExtenstion} />
+            </Switch>
+          </MainLayout>
+        </Route>
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
