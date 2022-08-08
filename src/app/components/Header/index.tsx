@@ -8,13 +8,14 @@ import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
 import { messages } from './messages';
 import { Col, Collapse, Image, Row, Typography } from 'antd';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 const { Text } = Typography;
 interface Props {}
 
 export function Header(props: Props) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
-
+  const history = useHistory();
   return (
     <HeaderWrapper>
       <Row justify="space-around" align="middle">
@@ -29,12 +30,44 @@ export function Header(props: Props) {
           <Text>FB Icon</Text>
         </Col>
       </Row>
+      <Row>
+        <ul>
+          <li>
+            <LinkWraper>
+              <NavLink to="/">Home</NavLink>
+            </LinkWraper>
+            <LinkWraper>
+              <NavLink to="/about">About</NavLink>
+            </LinkWraper>
+            <LinkWraper>
+              <NavLink to="/service">Service</NavLink>
+            </LinkWraper>
+            <LinkWraper>
+              <NavLink to="/type">Type Car</NavLink>
+            </LinkWraper>
+            <LinkWraper>
+              <NavLink to="/activity">Activity</NavLink>
+            </LinkWraper>
+            <LinkWraper>
+              <NavLink to="/contact">Contact</NavLink>
+            </LinkWraper>
+            <LinkWraper>
+              <NavLink to="/test">test</NavLink>
+            </LinkWraper>
+          </li>
+        </ul>
+        <button onClick={() => history.push('/service')}>Go to service</button>
+      </Row>
     </HeaderWrapper>
   );
 }
 
 const HeaderWrapper = styled.header`
   background-color: #fbbc05;
+`;
+
+const LinkWraper = styled.span`
+  margin: 0px 10px;
 `;
 
 const TextWraper = styled.div``;

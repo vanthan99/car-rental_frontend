@@ -16,10 +16,15 @@ import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 import { MainLayout } from './layouts/MainLayout';
-import { GoogleMapExtenstion } from './components/GoogleMapExtenstion/Loadable';
+import { GoogleMapExtenstion } from './components/GoogleMapExtenstion';
 import { Footer } from './components/Footer';
 import { AdminLayout } from './layouts';
 import { AdminNotFoundPage } from './components/AdminNotFoundPage';
+import { AboutPage } from './pages/AboutPage/Loadable';
+import { ServicePage } from './pages/ServicePage/Loadable';
+import { CarTypePage } from './pages/CarTypePage/Loadable';
+import { ActivityPage } from './pages/ActivityPage/Loadable';
+import { ContactPage } from './pages/ContactPage/Loadable';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -32,7 +37,6 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-
       <Switch>
         <Route exact path={['/admin*']}>
           <AdminLayout>
@@ -43,11 +47,16 @@ export function App() {
           </AdminLayout>
         </Route>
         {/* <Route component={NotFoundPage} /> */}
-        <Route exact path={['/', '/about']}>
+        <Route>
           <MainLayout>
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route exact path="/about" component={GoogleMapExtenstion} />
+              <Route exact path="/test" component={GoogleMapExtenstion} />
+              <Route exact path="/about" component={AboutPage} />
+              <Route exact path="/service" component={ServicePage} />
+              <Route exact path="/type" component={CarTypePage} />
+              <Route exact path="/activity" component={ActivityPage} />
+              <Route exact path="/contact" component={ContactPage} />
             </Switch>
           </MainLayout>
         </Route>

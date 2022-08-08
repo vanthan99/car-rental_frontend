@@ -15,12 +15,16 @@ export function Footer(props: Props) {
   const { t, i18n } = useTranslation();
 
   return (
-    <Div>
+    <FooterWrapper>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
       this is footer avd
-    </Div>
+    </FooterWrapper>
   );
 }
 
-const Div = styled.div``;
+const FooterWrapper = styled.div`
+  width: 100%;
+  height: 100px;
+  background-color: yellow;
+`;

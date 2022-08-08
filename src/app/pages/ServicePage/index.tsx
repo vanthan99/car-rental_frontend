@@ -10,7 +10,7 @@ import { messages } from './messages';
 
 interface Props {}
 
-export const ServicePage = memo((props: Props) => {
+export function ServicePage() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
 
@@ -20,6 +20,6 @@ export const ServicePage = memo((props: Props) => {
       {/*  {t(...messages.someThing())}  */}
     </Div>
   );
-});
+}
 
 const Div = styled.div``;

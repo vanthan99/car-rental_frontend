@@ -18,9 +18,6 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export function HomePage() {
-  const layoutProps: _LayoutProps = {
-    childElement: <SideBar />,
-  };
   return (
     <>
       <Helmet>

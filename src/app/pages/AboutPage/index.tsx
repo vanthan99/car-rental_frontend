@@ -10,16 +10,18 @@ import { messages } from './messages';
 
 interface Props {}
 
-export const AboutPage = memo((props: Props) => {
+export function AboutPage() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
+  console.log('ABC');
 
   return (
-    <Div>
+    <AboutPageWrapper>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
-    </Div>
+      this is about page
+    </AboutPageWrapper>
   );
-});
+}
 
-const Div = styled.div``;
+const AboutPageWrapper = styled.div``;
