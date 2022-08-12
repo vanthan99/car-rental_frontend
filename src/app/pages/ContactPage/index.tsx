@@ -7,6 +7,8 @@ import React, { memo } from 'react';
 import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
 import { messages } from './messages';
+import { Contact } from 'app/components/Contact/Loadable';
+import { GoogleMapExtenstion } from 'app/components/GoogleMapExtenstion/Loadable';
 
 interface Props {}
 
@@ -15,11 +17,13 @@ export function ContactPage() {
   const { t, i18n } = useTranslation();
 
   return (
-    <Div>
+    <ContactPageWrapper>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
-    </Div>
+      <Contact />
+      <GoogleMapExtenstion />
+    </ContactPageWrapper>
   );
 }
 
-const Div = styled.div``;
+const ContactPageWrapper = styled.div``;

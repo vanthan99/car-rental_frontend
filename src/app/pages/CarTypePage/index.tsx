@@ -15,11 +15,12 @@ export function CarTypePage() {
   const { t, i18n } = useTranslation();
 
   return (
-    <Div>
+    <CarTypeWrapper>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
-    </Div>
+      this is car type page
+    </CarTypeWrapper>
   );
 }
 
-const Div = styled.div``;
+const CarTypeWrapper = styled.div``;

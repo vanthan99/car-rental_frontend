@@ -15,11 +15,12 @@ export function ActivityPage() {
   const { t, i18n } = useTranslation();
 
   return (
-    <Div>
+    <ActivityPageWrapper>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
-    </Div>
+      this is activity page
+    </ActivityPageWrapper>
   );
 }
 
-const Div = styled.div``;
+const ActivityPageWrapper = styled.div``;

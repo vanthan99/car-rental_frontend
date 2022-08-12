@@ -1,6 +1,6 @@
 /**
  *
- * ServicePage
+ * Booking
  *
  */
 import React, { memo } from 'react';
@@ -10,17 +10,17 @@ import { messages } from './messages';
 
 interface Props {}
 
-export function ServicePage() {
+export const Booking = memo((props: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
 
   return (
-    <ServicePageWrapper>
+    <BookingWrapper>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
-      this is service page
-    </ServicePageWrapper>
+      This is booking
+    </BookingWrapper>
   );
-}
+});
 
-const ServicePageWrapper = styled.div``;
+const BookingWrapper = styled.div``;

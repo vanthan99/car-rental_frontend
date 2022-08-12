@@ -15,7 +15,6 @@ interface Props {}
 export function Header(props: Props) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
-  const history = useHistory();
   return (
     <HeaderWrapper>
       <Row justify="space-around" align="middle">
@@ -51,12 +50,8 @@ export function Header(props: Props) {
             <LinkWraper>
               <NavLink to="/contact">Contact</NavLink>
             </LinkWraper>
-            <LinkWraper>
-              <NavLink to="/test">test</NavLink>
-            </LinkWraper>
           </li>
         </ul>
-        <button onClick={() => history.push('/service')}>Go to service</button>
       </Row>
     </HeaderWrapper>
   );

@@ -24,7 +24,7 @@ export function HomePage() {
         <title>Home</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      Than Test
+      this is home page
     </>
   );
 }
