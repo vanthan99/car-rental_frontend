@@ -1,3 +1,4 @@
+import { Breadcrumb } from 'app/components/Breadcrumb';
 import { Footer } from 'app/components/Footer/Loadable';
 import { Header } from 'app/components/Header/Loadable';
 import { SideBar } from 'app/components/SideBar/Loadable';
@@ -11,6 +12,7 @@ export function MainLayout({ children }) {
     <>
       <Header />
       {/* <SideBar /> */}
+      <Breadcrumb />
       <MainWrapper>{children}</MainWrapper>
       <Footer />
     </>

@@ -7,7 +7,7 @@ import React, { memo } from 'react';
 import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
 import { messages } from './messages';
-import { Button, Col, Form, Row, Select, Typography, Input } from 'antd';
+import { Button, Col, Form, Row, Select, Typography, Input, Space } from 'antd';
 import { Link } from 'react-router-dom';
 import TextArea from 'antd/lib/input/TextArea';
 const { Title, Text, Paragraph } = Typography;
@@ -18,6 +18,7 @@ const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
 };
+
 const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
@@ -27,19 +28,6 @@ export const Contact = () => {
   const { t, i18n } = useTranslation();
 
   const [form] = Form.useForm();
-
-  const onGenderChange = (value: string) => {
-    switch (value) {
-      case 'male':
-        form.setFieldsValue({ note: 'Hi, man!' });
-        return;
-      case 'female':
-        form.setFieldsValue({ note: 'Hi, lady!' });
-        return;
-      case 'other':
-        form.setFieldsValue({ note: 'Hi there!' });
-    }
-  };
 
   const onFinish = (values: any) => {
     console.log(values);
@@ -51,15 +39,14 @@ export const Contact = () => {
 
   const onFill = () => {
     form.setFieldsValue({
-      note: 'Hello world!',
-      gender: 'male',
+      name: 'Hello world!',
+      content: 'leewd2daw',
+      phoneNumber: '0927312312312',
     });
   };
 
   return (
     <ContactWrapper>
-      {t('')}
-      {/*  {t(...messages.someThing())}  */}
       <Row justify="center">
         <Col>
           <Title>LIÊN HỆ</Title>
@@ -83,76 +70,71 @@ export const Contact = () => {
         </Col>
         <Col sm={9}>
           <Form
-            {...layout}
+            // {...layout}
             form={form}
             name="control-hooks"
             onFinish={onFinish}
           >
-            <Form.Item name="note" label="Note" rules={[{ required: true }]}>
-              <Input />
-            </Form.Item>
-            <Form.Item name="name">
-              <Input placeholder="Họ tên" />
-            </Form.Item>
-            <Form.Item name="phoneNumber">
-              <Input placeholder="Số điện thoại" />
-            </Form.Item>
-            <Form.Item name="address">
-              <Input placeholder="Địa chỉ" />
-            </Form.Item>
-            <Form.Item name="email">
-              <Input placeholder="Email" />
-            </Form.Item>
-            <Form.Item name="subject">
-              <Input placeholder="Chủ đề" />
-            </Form.Item>
-            <Form.Item name="content">
-              <TextArea placeholder="Nội dung" />
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+              <Col sm={12}>
+                <Form.Item
+                  name="name"
+                  rules={[{ required: true, message: 'Vui lòng nhập họ tên!' }]}
+                >
+                  <Input size="large" placeholder="Họ tên" />
+                </Form.Item>
+              </Col>
+              <Col sm={12}>
+                <Form.Item
+                  name="phoneNumber"
+                  rules={[
+                    { required: true, message: 'Vui lòng nhập số điện thoại!' },
+                  ]}
+                >
+                  <Input size="large" placeholder="Số điện thoại" />
+                </Form.Item>
+              </Col>
+              <Col sm={12}>
+                <Form.Item
+                  name="address"
+                  rules={[
+                    { required: true, message: 'Vui lòng nhập địa chỉ!' },
+                  ]}
+                >
+                  <Input size="large" placeholder="Địa chỉ" />
+                </Form.Item>
+              </Col>
+              <Col sm={12}>
+                <Form.Item
+                  name="email"
+                  rules={[{ required: true, message: 'Vui lòng nhập email!' }]}
+                >
+                  <Input size="large" placeholder="Email" />
+                </Form.Item>
+              </Col>
+            </Row>
+            <Form.Item
+              name="subject"
+              rules={[{ required: true, message: 'Vui lòng nhập chủ để!' }]}
+            >
+              <Input size="large" placeholder="Chủ đề" />
             </Form.Item>
             <Form.Item
-              name="gender"
-              label="Gender"
-              rules={[{ required: true }]}
+              name="content"
+              rules={[{ required: true, message: 'Vui lòng nhập nội dung' }]}
             >
-              <Select
-                placeholder="Select a option and change input text above"
-                onChange={onGenderChange}
-                allowClear
-              >
-                <Option value="male">male</Option>
-                <Option value="female">female</Option>
-                <Option value="other">other</Option>
-              </Select>
+              <TextArea rows={5} placeholder="Nội dung" />
             </Form.Item>
-            <Form.Item
-              noStyle
-              shouldUpdate={(prevValues, currentValues) =>
-                prevValues.gender !== currentValues.gender
-              }
-            >
-              {({ getFieldValue }) =>
-                getFieldValue('gender') === 'other' ? (
-                  <Form.Item
-                    name="customizeGender"
-                    label="Customize Gender"
-                    rules={[{ required: true }]}
-                  >
-                    <Input />
-                  </Form.Item>
-                ) : null
-              }
-            </Form.Item>
-            <Form.Item {...tailLayout}>
-              <Button type="primary" htmlType="submit">
-                Submit
-              </Button>
-              <Button htmlType="button" onClick={onReset}>
-                Reset
-              </Button>
-              <Button type="link" htmlType="button" onClick={onFill}>
-                Fill form
-              </Button>
-            </Form.Item>
+            <Row>
+              <Space>
+                <Button size="large" type="primary" htmlType="submit">
+                  Gửi
+                </Button>
+                <Button size="large" htmlType="button" onClick={onReset}>
+                  Nhập lại
+                </Button>
+              </Space>
+            </Row>
           </Form>
         </Col>
       </Row>
