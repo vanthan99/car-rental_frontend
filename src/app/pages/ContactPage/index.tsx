@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { messages } from './messages';
 import { Contact } from 'app/components/Contact/Loadable';
 import { GoogleMapExtenstion } from 'app/components/GoogleMapExtenstion/Loadable';
+import { styleVariables } from 'styles';
 
 interface Props {}
 
@@ -21,9 +22,12 @@ export function ContactPage() {
       {t('')}
       {/*  {t(...messages.someThing())}  */}
       <Contact />
-      <GoogleMapExtenstion />
     </ContactPageWrapper>
   );
 }
 
-const ContactPageWrapper = styled.div``;
+const ContactPageWrapper = styled.div`
+  background-color: ${styleVariables.BACKGROUND_COLOR};
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+`;

@@ -25,6 +25,7 @@ import { ServicePage } from './pages/ServicePage/Loadable';
 import { CarTypePage } from './pages/CarTypePage/Loadable';
 import { ActivityPage } from './pages/ActivityPage/Loadable';
 import { ContactPage } from './pages/ContactPage/Loadable';
+import { BackTop } from 'antd';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -63,6 +64,7 @@ export function App() {
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
+      <BackTop />
     </BrowserRouter>
   );
 }
