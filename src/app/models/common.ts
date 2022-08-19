@@ -4,3 +4,10 @@ export interface _LayoutProps {
   childElement?: ReactElement;
   googleMapExtendsion?: ReactElement;
 }
+
+export interface PostItemModal {
+  title: string;
+  datePosted: Date;
+  description: string;
+  imageUrl: string;
+}

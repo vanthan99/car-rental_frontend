@@ -10,6 +10,8 @@ import { messages } from './messages';
 import { Button, Col, Form, Row, Select, Typography, Input, Space } from 'antd';
 import { Link } from 'react-router-dom';
 import TextArea from 'antd/lib/input/TextArea';
+import { styleVariables } from 'styles';
+import { TitleMain } from '../TitleMain';
 const { Title, Text, Paragraph } = Typography;
 
 const { Option } = Select;
@@ -49,24 +51,24 @@ export const Contact = () => {
     <ContactWrapper>
       <Row justify="center">
         <Col>
-          <Title>LIÊN HỆ</Title>
+          <TitleMain name="LIÊN HỆ" />
         </Col>
       </Row>
       <Row justify="center">
         <Col sm={9}>
-          <Title>CHO THUÊ XE TỰ LÁI TRÍ TÍN</Title>
-          <Paragraph>
+          <CompanyTitle>CHO THUÊ XE TỰ LÁI TRÍ TÍN</CompanyTitle>
+          <CompanyInfoItem>
             Địa Chỉ:{' '}
             <Link to="/">
               D1-109 Nhà ở an sinh xã hội becamex, Định Hoà, Thủ Dầu Một, Bình
               Dương
             </Link>
-          </Paragraph>
-          <Paragraph>Hotline: 0382936939 - 0902927936</Paragraph>
-          <Paragraph>Email:congtri1410@gmail.com</Paragraph>
-          <Paragraph>
+          </CompanyInfoItem>
+          <CompanyInfoItem>Hotline: 0382936939 - 0902927936</CompanyInfoItem>
+          <CompanyInfoItem>Email:congtri1410@gmail.com</CompanyInfoItem>
+          <CompanyInfoItem>
             Website: <Link to="/">http://xetulaitritin.com</Link>
-          </Paragraph>
+          </CompanyInfoItem>
         </Col>
         <Col sm={9}>
           <Form
@@ -142,6 +144,18 @@ export const Contact = () => {
   );
 };
 
-const ContactForm = styled.div``;
+const CompanyTitle = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+  color: ${styleVariables.TEXT_COLOR_RED};
+  margin-top: 0;
+  margin-bottom: 1rem;
+`;
+
+const CompanyInfoItem = styled.div`
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 18px;
+`;
 
 const ContactWrapper = styled.div``;

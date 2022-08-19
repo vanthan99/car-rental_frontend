@@ -10,9 +10,11 @@ export const styleVariables = {
   HOVER_COLOR3: '',
 
   COLOR_GRAY: '#808080',
-  TEXT_COLOR_BLACK: 'black',
+  TEXT_COLOR_BLACK: '#000',
   TEXT_COLOR_WHITE: '#fff',
-  TEXT_COLOR_HOVER: 'red',
+  TEXT_COLOR_HOVER: '#ff0000',
+  TEXT_COLOR_RED: '#ff0000',
+  TEXT_COLOR_GRAY: '#6c757d',
   TEXT_FONT_SIZE_LV1: '30px',
   TEXT_FONT_SIZE_LV2: '20px',
   TEXT_FONT_SIZE_LV3: '13px',
