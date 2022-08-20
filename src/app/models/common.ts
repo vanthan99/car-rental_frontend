@@ -11,3 +11,16 @@ export interface PostItemModal {
   description: string;
   imageUrl: string;
 }
+
+export interface CarTypeItemModal {
+  title: string;
+  description: string;
+  imageUrl: string;
+  redirectUrl: string;
+}
+
+export interface ServiceItemModal {
+  title: string;
+  imageUrl: string;
+  redirectUrl: string;
+}

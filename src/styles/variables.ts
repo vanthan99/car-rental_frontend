@@ -2,8 +2,12 @@ export const styleVariables = {
   BACKGROUND_COLOR: '#fbbc05',
   BACKGROUND_COLOR2: '#fff',
   BACKGROUND_COLOR3: 'rgba(255, 255, 255, .1)',
+  BACKGROUND_COLOR_CREAM: '#f2eee5',
 
-  BACKGROUND_IMAGE: 'http://xetulaitritin.com/assets/images/bgfooter.jpg',
+  BACKGROUND_IMAGE_FOOTER:
+    'http://xetulaitritin.com/assets/images/bgfooter.jpg',
+  BACKGROUND_IMAGE_CARTYPE_TITLE:
+    'http://xetulaitritin.com/assets/images/bg-title-dichvu.png',
 
   HOVER_COLOR: 'red',
   HOVER_COLOR2: 'yellow',

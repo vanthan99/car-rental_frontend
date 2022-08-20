@@ -102,7 +102,8 @@ export function Footer() {
 const FooterWrapper = styled.div`
   width: 100%;
   min-height: 100px;
-  background: url(${styleVariables.BACKGROUND_IMAGE}) no-repeat top center;
+  background: url(${styleVariables.BACKGROUND_IMAGE_FOOTER}) no-repeat top
+    center;
   background-size: cover;
   padding: 20px 0 0 0;
 `;
