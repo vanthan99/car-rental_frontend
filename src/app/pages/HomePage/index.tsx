@@ -27,7 +27,8 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import { styleVariables } from 'styles';
-
+import Slide from 'react-reveal/Slide';
+import Rotate from 'react-reveal/Rotate';
 const carTypeList: Array<CarTypeItemModal> = [
   {
     title: 'cho thuê xe 4 chỗ',
@@ -78,9 +79,9 @@ const renderProcedureList = procedureList.map((item, index) => (
   <Col>{ProcedureItem(item)}</Col>
 ));
 
-const renderCarTypeList = carTypeList.map((item, index) =>
-  CarTypeItem(item, index),
-);
+const renderCarTypeList = carTypeList.map((item, index) => (
+  <Slide bottom>{CarTypeItem(item, index)}</Slide>
+));
 
 const ServiceItems: Array<ServiceItemModal> = [
   {
@@ -110,7 +111,11 @@ const ServiceItems: Array<ServiceItemModal> = [
 ];
 
 const renderServiceItem = ServiceItems.map((item, index) => (
-  <Col sm={12}>{ServiceItem(item, index)}</Col>
+  <Col sm={12}>
+    <Rotate bottom right>
+      {ServiceItem(item, index)}
+    </Rotate>
+  </Col>
 ));
 
 export function HomePage() {

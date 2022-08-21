@@ -87,7 +87,7 @@ const CarTypeItemTitleText = styled(Link)`
   padding-left: 30px;
   font-size: 18px;
   text-transform: uppercase;
-  // font-weight: 900;
+  font-weight: 900;
   display: flex;
   align-items: center;
   padding-bottom: 9px;

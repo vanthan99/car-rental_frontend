@@ -32,7 +32,7 @@ export function ProcedureItem(item: ProcedureItemModal) {
 const _Link = styled(Link)`
   -webkit-line-clamp: 1;
   color: #fff;
-  // font-weight: 800;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 20px;
   overflow: hidden;

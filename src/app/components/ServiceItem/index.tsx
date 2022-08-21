@@ -35,7 +35,7 @@ const Title = styled(Link)`
   color: #000;
   font-size: 20px;
   text-transform: uppercase;
-  // font-weight: 900;
+  font-weight: 900;
 
   text-decoration: none !important;
 

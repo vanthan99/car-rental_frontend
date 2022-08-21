@@ -17,6 +17,7 @@ export function Footer() {
   const Title = styled.p`
     text-transform: uppercase;
     font-size: 25px;
+    font-weight: 900;
     color: ${styleVariables.BACKGROUND_COLOR};
   `;
 
@@ -131,5 +132,5 @@ const Li = styled.li`
 
 const CompanyInfoItem = styled.p`
   color: ${styleVariables.TEXT_COLOR_WHITE};
-  font-size: 15px;
+  font-size: 14px;
 `;

@@ -21,6 +21,6 @@ const Title = styled.div`
 
   text-transform: uppercase;
   color: ${styleVariables.TEXT_COLOR_BLACK};
-  // font-weight: 800;
+  font-weight: 800;
   font-size: 23px;
 `;

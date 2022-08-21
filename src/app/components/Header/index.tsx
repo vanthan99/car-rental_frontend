@@ -237,7 +237,7 @@ const _NavLink = styled(NavLink)`
   position: relative;
   color: #333;
   padding: 0 20px;
-  // font-weight: 900;
+  font-weight: 900;
   text-transform: uppercase;
   text-decoration: none !important;
   height: 100%;
