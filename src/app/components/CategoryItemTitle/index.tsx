@@ -31,8 +31,10 @@ const Description = styled.p`
   text-align: center;
   color: #333333;
   font-weight: 400;
-  background: url(http://xetulaitritin.com/assets/images/bg-title.png) no-repeat
-    bottom center;
+  background-image: url(http://xetulaitritin.com/assets/images/bg-title.png);
+
+  background-repeat: no-repeat;
+  background-position: bottom center;
   padding-bottom: 20px;
   margin-bottom: 1.5rem;
   margin-top: 0;

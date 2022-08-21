@@ -203,16 +203,18 @@ const ServiceWrapper = styled.div`
   padding-bottom: 2rem;
 `;
 const ProcedureWrapper = styled.div`
-  background: url(http://xetulaitritin.com/assets/images/bg-thutuc.jpg)
-    no-repeat top center;
+  background-image: url(http://xetulaitritin.com/assets/images/bg-thutuc.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
   padding-top: 2rem;
   padding-bottom: 2rem;
 `;
 
 const CarTypeWrapper = styled.div`
-  background: url(http://xetulaitritin.com/assets/images/bg-dichvu.jpg)
-    no-repeat top center;
+  background-image: url(http://xetulaitritin.com/assets/images/bg-dichvu.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
   padding-top: 2rem;
   padding-bottom: 2rem;

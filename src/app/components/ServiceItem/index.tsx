@@ -54,7 +54,7 @@ const ImageWrapper = styled(Link)`
 
 const LinkWrapper = styled.p`
   padding: 7px;
-  background: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.6);
 
   margin-top: 0;

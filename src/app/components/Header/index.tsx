@@ -213,7 +213,7 @@ const _Input = styled.input`
   outline: none;
   padding: 0px;
   border: 0px;
-  background: transparent;
+  background-color: transparent;
   text-indent: 10px;
   font-size: 12px;
   box-sizing: border-box;
@@ -225,7 +225,7 @@ const _Input = styled.input`
 
 const SearchWrapper = styled.div`
   width: 235px;
-  background: #f1f3f4;
+  background-color: #f1f3f4;
   border-radius: 20px;
   align-items: center !important;
   justify-content: space-between !important;
@@ -342,7 +342,7 @@ const HeaderWrapper = styled.header`
 // `;
 
 const MenuWrapper = styled.div`
-  background: #fff;
+  background-color: #fff;
   padding: 13px 0;
 `;
 const DeskTopMenu = styled.div`

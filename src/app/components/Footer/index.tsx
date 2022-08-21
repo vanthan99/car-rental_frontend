@@ -32,7 +32,7 @@ export function Footer() {
       content: '';
       width: 50px;
       height: 1px;
-      background: ${styleVariables.BACKGROUND_COLOR};
+      background-color: ${styleVariables.BACKGROUND_COLOR};
       position: absolute;
       bottom: 0;
       left: 0;
@@ -103,8 +103,9 @@ export function Footer() {
 const FooterWrapper = styled.div`
   width: 100%;
   min-height: 100px;
-  background: url(${styleVariables.BACKGROUND_IMAGE_FOOTER}) no-repeat top
-    center;
+  background-image: url(${styleVariables.BACKGROUND_IMAGE_FOOTER});
+  background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
   padding: 20px 0 0 0;
 `;

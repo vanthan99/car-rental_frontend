@@ -63,7 +63,7 @@ const ItemWrapper = styled.div`
 const ShareWrapper = styled.div`
   padding: 17px 15px 10px 15px;
   line-height: normal;
-  background: rgba(128, 128, 128, 0.15);
+  background-color: rgba(128, 128, 128, 0.15);
   margin-top: 15px;
   border-radius: 5px;
 `;

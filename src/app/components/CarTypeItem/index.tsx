@@ -44,7 +44,7 @@ const RedirectButton = styled(Link)`
   width: 130px;
   height: 35px;
   border: 1px solid ${styleVariables.BACKGROUND_COLOR};
-  background: #fff;
+  background-color: #fff;
   border-radius: 30px;
   color: #000;
   font-size: 15px;
@@ -82,8 +82,9 @@ const CarTypeItemTitleText = styled(Link)`
   color: #fff;
   width: 256px;
   height: 49px;
-  background: url(http://xetulaitritin.com/assets/images/title-dichvu-1.png)
-    no-repeat left center;
+  background-image: url(http://xetulaitritin.com/assets/images/title-dichvu-1.png);
+  background-repeat: no-repeat;
+  background-position: left center;
   padding-left: 30px;
   font-size: 18px;
   text-transform: uppercase;
@@ -112,7 +113,7 @@ const CarTypeItemTitle = styled.h3`
     top: 0;
     left: 150px;
 
-    background: url(http://xetulaitritin.com/assets/images/bg-title-dichvu.png);
+    background-image: url(http://xetulaitritin.com/assets/images/bg-title-dichvu.png);
   }
 `;
 const CarTypeItemWrapper = styled.div``;
