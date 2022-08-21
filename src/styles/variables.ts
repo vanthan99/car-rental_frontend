@@ -17,7 +17,7 @@ export const styleVariables = {
   TEXT_COLOR_BLACK: '#000',
   TEXT_COLOR_WHITE: '#fff',
   TEXT_COLOR_HOVER: '#ff0000',
-  TEXT_COLOR_RED: '#ff0000',
+  TEXT_COLOR_RED: '#ec2d3f',
   TEXT_COLOR_GRAY: '#6c757d',
   TEXT_FONT_SIZE_LV1: '30px',
   TEXT_FONT_SIZE_LV2: '20px',
