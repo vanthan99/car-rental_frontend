@@ -24,3 +24,9 @@ export interface ServiceItemModal {
   imageUrl: string;
   redirectUrl: string;
 }
+
+export interface ProcedureItemModal {
+  imageUrl: string;
+  title: string;
+  redirectUrl: string;
+}

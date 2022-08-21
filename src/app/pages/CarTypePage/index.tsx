@@ -11,6 +11,7 @@ import { styleVariables } from 'styles';
 import { TitleMain } from 'app/components/TitleMain';
 import { CarTypeItemModal } from 'app/models';
 import { CarTypeItem } from 'app/components/CarTypeItem';
+import { Col, Row } from 'antd';
 
 interface Props {}
 
@@ -42,7 +43,9 @@ export function CarTypePage() {
   return (
     <CarTypeWrapper>
       <TitleMain name="LOẠI XE" />
-      {renderCarTypeList}
+      <Row justify="center">
+        <Col sm={18}>{renderCarTypeList}</Col>
+      </Row>
     </CarTypeWrapper>
   );
 }

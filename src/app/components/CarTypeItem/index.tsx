@@ -16,7 +16,7 @@ export function CarTypeItem(item: CarTypeItemModal, index: number) {
   const { description, redirectUrl, imageUrl, title } = item;
   return (
     <Row justify="center" style={{ marginTop: '2rem' }} key={index}>
-      <Col sm={18}>
+      <Col>
         <CarTypeItemWrapper>
           <Row justify="space-between">
             <Col sm={10} order={index % 2 === 0 ? 0 : 1}>
