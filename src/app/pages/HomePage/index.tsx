@@ -76,7 +76,7 @@ const procedureList: Array<ProcedureItemModal> = [
 ];
 
 const renderProcedureList = procedureList.map((item, index) => (
-  <Col>{ProcedureItem(item)}</Col>
+  <Col sm={6}>{ProcedureItem(item)}</Col>
 ));
 
 const renderCarTypeList = carTypeList.map((item, index) => (
