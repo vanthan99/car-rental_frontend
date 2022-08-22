@@ -82,7 +82,7 @@ const CarTypeItemTitleText = styled(Link)`
   color: #fff;
   width: 256px;
   height: 49px;
-  background-image: url(http://xetulaitritin.com/assets/images/title-dichvu-1.png);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/title-dichvu-1.png?alt=media&token=4c7916f3-7a72-4802-91a1-69a14483938f);
   background-repeat: no-repeat;
   background-position: left center;
   padding-left: 30px;
@@ -113,7 +113,9 @@ const CarTypeItemTitle = styled.h3`
     top: 0;
     left: 150px;
 
-    background-image: url(http://xetulaitritin.com/assets/images/bg-title-dichvu.png);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-title-dichvu%20(
+        1
+      ).png?alt=media&token=78ca7b1a-37a9-42d9-9d18-0c48afb2521b);
   }
 `;
 const CarTypeItemWrapper = styled.div``;

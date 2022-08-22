@@ -105,7 +105,7 @@ export function Header(props: Props) {
       <MenuWrapper>
         <DeskTopMenu>
           <ImageWrapper to="/">
-            <_Image src="http://xetulaitritin.com/thumbs/141x53x1/upload/photo/logo-6731.png" />
+            <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
           </ImageWrapper>
           <div
             style={{

@@ -36,7 +36,7 @@ const carTypeList: Array<CarTypeItemModal> = [
       'Xe 4 chổ tiêu biểu : Xe Mazda 3 đời mới 2022 màu trắng - Xe có nhiều tính năng hiện đại mà những xe đời cũ không có như: thắng tay điện tử, đèn sáng tự động ban đêm, gạt nước mưa tự động, ghế chỉnh điện, cảnh báo va chạm sau xe .v.v... - Các tiện ích được trang bị đầy đủ: camera hành trình có cảnh báo tốc độ, định vị google maps, điểu hòa ghế sau, dây kích bình, bơm xe mini .v.v... - Gọi để báo giá: hotline 0382936939 - 0902927936 Ngoài ra chúng tôi còn các dòng xe khác xin liên hệ để biết thêm chi tiết',
     redirectUrl: '/',
     imageUrl:
-      'http://xetulaitritin.com/thumbs/550x370x1/upload/news/z34053520846735a84ce25fc2f04b806661f708e35f638-9758.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z34053520846735a84ce25fc2f04b806661f708e35f638-9758.jpg?alt=media&token=34f8afff-8caa-4d1b-a25b-0e7911387fe2',
   },
   {
     title: 'cho thuê xe 7 chỗ',
@@ -44,7 +44,7 @@ const carTypeList: Array<CarTypeItemModal> = [
       'Xe 7 chổ tiêu biểu : Xe Xpander đời mới 2021 màu trắng - Khoang xe rộng rãi thích hợp đi du lịch đường dài cùng gia đình và bạn bè - Các tiện ích được trang bị đầy đủ: màn hình giải trí youtube, wifi sài thoải mái, camera hành trình có cảnh báo tốc độ, định vị google maps, điểu hòa ghế sau, bơm xe mini .v.v... - Gọi để báo giá: hotline 0382936939 - 0902927936 Ngoài ra chúng tôi còn các dòng xe khác xin liên hệ để biết thêm chi tiết',
     redirectUrl: '/',
     imageUrl:
-      'http://xetulaitritin.com/thumbs/550x370x1/upload/news/z3405348776361a39a0c86edd68c90b56a33199fbdd88b-2030.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z3405348776361_a39a0c86edd68c90b56a33199fbdd88b.jpg?alt=media&token=b7068a78-d3c6-4ca4-aea6-6e69cd700a49',
   },
 ];
 
@@ -52,25 +52,25 @@ const procedureList: Array<ProcedureItemModal> = [
   {
     title: 'thủ tục đặt xe',
     imageUrl:
-      'http://xetulaitritin.com/thumbs/232x232x1/upload/news/thue-xe-tu-lai-1143.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/thue-xe-tu-lai-1143.jpg?alt=media&token=ef724c4d-5b2a-4865-ac4f-7d14537d6b32',
     redirectUrl: '/',
   },
   {
     title: 'giao nhận xe',
     imageUrl:
-      'http://xetulaitritin.com/thumbs/232x232x1/upload/news/thue-xe-tu-lai-phu-quoc-3-11630852841-2989.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/thue-xe-tu-lai-phu-quoc-3-11630852841-2989.jpg?alt=media&token=fb51904a-aec6-455a-844a-4cc6e9b5c718',
     redirectUrl: '/',
   },
   {
     title: 'trải nghiệm xe',
     imageUrl:
-      'http://xetulaitritin.com/thumbs/232x232x1/upload/news/thu-tuc-thue-xe-tu-lai-tai-da-nang-8-3316.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/thu-tuc-thue-xe-tu-lai-tai-da-nang-8-3316.jpg?alt=media&token=3f457cb8-d357-4a82-92e4-0013ddd6b110',
     redirectUrl: '/',
   },
   {
     title: 'kết thúc',
     imageUrl:
-      'http://xetulaitritin.com/thumbs/232x232x1/upload/news/cho-thue-xe-2693.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/cho-thue-xe-2693.jpg?alt=media&token=286bcb80-63db-4998-a3b9-75ded0a1c43d',
     redirectUrl: '/',
   },
 ];
@@ -86,25 +86,25 @@ const renderCarTypeList = carTypeList.map((item, index) => (
 const ServiceItems: Array<ServiceItemModal> = [
   {
     imageUrl:
-      'http://xetulaitritin.com/thumbs/576x300x1/upload/news/z340534869004776aec2e23062d0c162d372845fde8868-7783.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z340534869004776aec2e23062d0c162d372845fde8868-7783.jpg?alt=media&token=c6827636-f377-4d6a-b6d9-11c47728c77c',
     title: 'CHO THUÊ XE TỰ LÁI',
     redirectUrl: '/',
   },
   {
     imageUrl:
-      'http://xetulaitritin.com/thumbs/576x300x1/upload/news/capture-8099.png',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/capture-8099.png?alt=media&token=31a7b93e-c49c-440e-a84b-8919b7ca7141',
     title: 'CHO THUÊ XE CÓ TÀI',
     redirectUrl: '/',
   },
   {
     imageUrl:
-      'http://xetulaitritin.com/thumbs/576x300x1/upload/news/capture-6695.png',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/capture-6695.png?alt=media&token=f72f1d34-ec49-43c1-a8ee-1b795281537e',
     title: 'NHẬN KÝ GỬI XE',
     redirectUrl: '/',
   },
   {
     imageUrl:
-      'http://xetulaitritin.com/thumbs/576x300x1/upload/news/thue-xe-hoa-thu-dau-mot-6714.png',
+      'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/thue-xe-hoa-thu-dau-mot-6714.png?alt=media&token=9f1ae422-8bc9-4b83-be7b-6ae95ca97833',
     title: 'CHO THUÊ XE HOA',
     redirectUrl: '/',
   },
@@ -203,7 +203,7 @@ const ServiceWrapper = styled.div`
   padding-bottom: 2rem;
 `;
 const ProcedureWrapper = styled.div`
-  background-image: url(http://xetulaitritin.com/assets/images/bg-thutuc.jpg);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-thutuc.jpg?alt=media&token=8ba62de0-63c5-4dbe-ad70-52543aed2943);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -212,7 +212,7 @@ const ProcedureWrapper = styled.div`
 `;
 
 const CarTypeWrapper = styled.div`
-  background-image: url(http://xetulaitritin.com/assets/images/bg-dichvu.jpg);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-dichvu.jpg?alt=media&token=c2a87a33-cfbf-4104-84df-73c55fa0f056);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;

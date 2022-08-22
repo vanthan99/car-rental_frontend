@@ -31,7 +31,7 @@ const Description = styled.p`
   text-align: center;
   color: #333333;
   font-weight: 400;
-  background-image: url(http://xetulaitritin.com/assets/images/bg-title.png);
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-title.png?alt=media&token=ae9b1d09-ac92-493d-811c-aa589fa95888);
 
   background-repeat: no-repeat;
   background-position: bottom center;

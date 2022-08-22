@@ -5,9 +5,9 @@ export const styleVariables = {
   BACKGROUND_COLOR_CREAM: '#f2eee5',
 
   BACKGROUND_IMAGE_FOOTER:
-    'http://xetulaitritin.com/assets/images/bgfooter.jpg',
+    'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-footer.jpg?alt=media&token=272c65de-1754-4d66-83f5-34d066d3035e',
   BACKGROUND_IMAGE_CARTYPE_TITLE:
-    'http://xetulaitritin.com/assets/images/bg-title-dichvu.png',
+    'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-title-dichvu.png?alt=media&token=a5e1fa40-3145-4ada-916d-b1256e0b98cf',
 
   HOVER_COLOR: 'red',
   HOVER_COLOR2: 'yellow',

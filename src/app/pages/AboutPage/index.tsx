@@ -71,7 +71,7 @@ export function AboutPage() {
                 <span style={{ fontSize: '16px' }}>&nbsp;</span>
                 <Image
                   alt="Cho thuê xe tự lái Trí Tín "
-                  src="http://xetulaitritin.com/upload/filemanager/Di%CC%A3ch-vu%CC%A3-cho-thue%CC%82-xe-tu%CC%9B%CC%A3-la%CC%81i-TPHCM-1400x725.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/Di%CC%A3ch-vu%CC%A3-cho-thue%CC%82-xe-tu%CC%9B%CC%A3-la%CC%81i-TPHCM-1400x725.jpg?alt=media&token=ffd29eb9-56bf-48dd-9806-b60716e6f273"
                 />
               </p>
               <h3 style={{ textAlign: 'center' }}>
@@ -93,7 +93,7 @@ export function AboutPage() {
               <p style={{ textAlign: 'center' }}>
                 <Image
                   alt="Cho thuê xe tự lái Trí Tín "
-                  src="http://xetulaitritin.com/upload/filemanager/z3405348776361_a39a0c86edd68c90b56a33199fbdd88b.jpg"
+                  src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z3405348776361_a39a0c86edd68c90b56a33199fbdd88b.jpg?alt=media&token=b7068a78-d3c6-4ca4-aea6-6e69cd700a49"
                 />
               </p>
               <p style={{ textAlign: 'center' }}>
