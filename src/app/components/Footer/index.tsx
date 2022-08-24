@@ -41,7 +41,7 @@ export function Footer() {
   return (
     <FooterWrapper>
       <Row justify="center">
-        <Col sm={10}>
+        <Col xs={24} sm={10}>
           <Title>CHO THUÊ XE TỰ LÁI TRÍ TÍN</Title>
           <Paragraph>
             <CompanyInfoItem>
@@ -55,7 +55,7 @@ export function Footer() {
             </CompanyInfoItem>
           </Paragraph>
         </Col>
-        <Col sm={8}>
+        <Col xs={24} sm={8}>
           <ServiceTitle>DỊCH VỤ</ServiceTitle>
           <Ul>
             <Li>
@@ -80,13 +80,13 @@ export function Footer() {
           padding: '1rem 0',
         }}
       >
-        <Col sm={12}>
+        <Col xs={24} sm={12}>
           <CompanyInfoItem>
             © 2022 CHO THUÊ XE TỰ LÁI TRÍ TÍN - KHANG TRẦN THIẾT KẾ WEBSITE
             070595 3638. Designed by Nina.vn
           </CompanyInfoItem>
         </Col>
-        <Col sm={6}>
+        <Col xs={24} sm={6}>
           <Row justify="end">
             <Col>
               <CompanyInfoItem>
@@ -108,6 +108,11 @@ const FooterWrapper = styled.div`
   background-position: top center;
   background-size: cover;
   padding: 20px 0 0 0;
+
+  // display: flex !important;
+  @media (max-width: 576px) {
+    padding: 0 10px;
+  }
 `;
 
 const _NavLink = styled(NavLink)`

@@ -170,7 +170,7 @@ export function HomePage() {
                 )}
               </Col>
             </Row>
-            <Row justify="space-between" gutter={[16, 16]}>
+            <Row justify="center" gutter={[16, 16]}>
               {renderProcedureList}
             </Row>
           </Col>

@@ -18,13 +18,13 @@ export function CarTypeItem(item: CarTypeItemModal, index: number) {
     <Row justify="center" style={{ marginTop: '2rem' }} key={index}>
       <Col>
         <CarTypeItemWrapper>
-          <Row justify="space-between">
-            <Col sm={10} order={index % 2 === 0 ? 0 : 1}>
+          <Row justify="space-between" gutter={[16, 16]}>
+            <Col xs={24} sm={10} order={index % 2 === 0 ? 0 : 1}>
               <ImageWrapper to={redirectUrl}>
                 <_Image src={imageUrl} />
               </ImageWrapper>
             </Col>
-            <Col sm={13}>
+            <Col xs={24} sm={13}>
               <CarTypeItemTitle>
                 <CarTypeItemTitleText to={redirectUrl}>
                   {title}
@@ -118,7 +118,11 @@ const CarTypeItemTitle = styled.h3`
       ).png?alt=media&token=78ca7b1a-37a9-42d9-9d18-0c48afb2521b);
   }
 `;
-const CarTypeItemWrapper = styled.div``;
+const CarTypeItemWrapper = styled.div`
+  @media (max-width: 576px) {
+    padding: 3px 5px;
+  }
+`;
 const ImageWrapper = styled(Link)`
   overflow: hidden;
   display: block;
@@ -132,6 +136,11 @@ const ImageWrapper = styled(Link)`
 
   border: 2px solid ${styleVariables.BACKGROUND_COLOR};
   position: absolute;
+
+  @media (max-width: 576px){
+    border: none;
+  }
+  
 `;
 
 const _Image = styled.img`
