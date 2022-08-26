@@ -1,34 +1,20 @@
-import { Col, Layout, Row, Space } from 'antd';
-import {
-  Content,
-  Footer as FooterAnt,
-  Header as HeaderAnt,
-} from 'antd/lib/layout/layout';
-import { Article } from 'app/components/Article/Loadable';
-import { CarRentalServiceOverview } from 'app/components/CarRentalServiceOverview/Loadable';
+import { Col, Row } from 'antd';
 import { CarTypeItem } from 'app/components/CarTypeItem';
 import { CategoryItemTitle } from 'app/components/CategoryItemTitle';
-import { Footer } from 'app/components/Footer/Loadable';
-import { GoogleMapExtenstion } from 'app/components/GoogleMapExtenstion/Loadable';
-import { Header } from 'app/components/Header/Loadable';
 import { ProcedureItem } from 'app/components/ProcedureItem';
-import { ProcedureOverview } from 'app/components/ProcedureOverview/Loadable';
 import { ServiceItem } from 'app/components/ServiceItem';
-import { SideBar } from 'app/components/SideBar/Loadable';
-import { SlideShow } from 'app/components/SlideShow/Loadable';
-import { MainLayout } from 'app/layouts';
 import {
   CarTypeItemModal,
   ProcedureItemModal,
   ServiceItemModal,
-  _LayoutProps,
 } from 'app/models';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useMediaQuery } from 'react-responsive';
+import Rotate from 'react-reveal/Rotate';
+import Slide from 'react-reveal/Slide';
 import styled from 'styled-components';
 import { styleVariables } from 'styles';
-import Slide from 'react-reveal/Slide';
-import Rotate from 'react-reveal/Rotate';
 const carTypeList: Array<CarTypeItemModal> = [
   {
     title: 'cho thuê xe 4 chỗ',
@@ -76,7 +62,9 @@ const procedureList: Array<ProcedureItemModal> = [
 ];
 
 const renderProcedureList = procedureList.map((item, index) => (
-  <Col sm={6}>{ProcedureItem(item)}</Col>
+  <Col key={index} sm={6}>
+    {ProcedureItem(item)}
+  </Col>
 ));
 
 const renderCarTypeList = carTypeList.map((item, index) => (
@@ -111,7 +99,7 @@ const ServiceItems: Array<ServiceItemModal> = [
 ];
 
 const renderServiceItem = ServiceItems.map((item, index) => (
-  <Col sm={12}>
+  <Col key={index} sm={12}>
     <Rotate bottom right>
       {ServiceItem(item, index)}
     </Rotate>
@@ -119,6 +107,11 @@ const renderServiceItem = ServiceItems.map((item, index) => (
 ));
 
 export function HomePage() {
+  // const isBigScreen = useMediaQuery({ query: '(max-width: 765px)' })
+  // console.log(isBigScreen);
+  // const [temp,setTemp] = React.useState(true);
+  // console.log(temp);
+
   return (
     <>
       <Helmet>

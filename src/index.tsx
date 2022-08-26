@@ -28,6 +28,7 @@ import reportWebVitals from 'reportWebVitals';
 import './locales/i18n';
 
 import 'antd/dist/antd.min.css';
+import { Context } from 'react-responsive';
 
 const store = configureAppStore();
 const MOUNT_NODE = document.getElementById('root') as HTMLElement;
@@ -35,9 +36,9 @@ const MOUNT_NODE = document.getElementById('root') as HTMLElement;
 ReactDOMClient.createRoot(MOUNT_NODE!).render(
   <Provider store={store}>
     <HelmetProvider>
-      {/* <React.StrictMode> */}
-      <App />
-      {/* </React.StrictMode> */}
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
     </HelmetProvider>
   </Provider>,
 );

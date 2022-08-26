@@ -5,15 +5,13 @@
  */
 import { Col, Row } from 'antd';
 import { CarTypeItemModal } from 'app/models';
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
-
-export function CarTypeItem(item: CarTypeItemModal, index: number) {
-  console.log(index);
-
+export const CarTypeItem = (item: CarTypeItemModal, index: number) => {
   const { description, redirectUrl, imageUrl, title } = item;
+  const [temp, setTemp] = useState(true);
   return (
     <Row justify="center" style={{ marginTop: '2rem' }} key={index}>
       <Col>
@@ -38,7 +36,7 @@ export function CarTypeItem(item: CarTypeItemModal, index: number) {
       </Col>
     </Row>
   );
-}
+};
 
 const RedirectButton = styled(Link)`
   width: 130px;

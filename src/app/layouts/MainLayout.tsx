@@ -6,9 +6,6 @@ import styled from 'styled-components';
 import __Breadcrumb from 'app/components/Breadcrumb';
 import { Col, Row } from 'antd';
 export function MainLayout({ children }) {
-  console.log('abc');
-  console.log();
-
   return (
     <>
       <Header />
