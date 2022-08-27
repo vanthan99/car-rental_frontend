@@ -34,8 +34,10 @@ const PostItems: Array<PostItemModal> = [
 ];
 
 export function ActivityPage() {
-  const renderPostItem = PostItems.map(item => (
-    <Col sm={9}>{PostItem(item)}</Col>
+  const renderPostItem = PostItems.map((item, index) => (
+    <Col key={index} sm={9}>
+      {PostItem(item)}
+    </Col>
   ));
   return (
     <ActivityPageWrapper>

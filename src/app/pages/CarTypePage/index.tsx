@@ -3,15 +3,14 @@
  * CarTypePage
  *
  */
-import React, { memo } from 'react';
-import styled from 'styled-components/macro';
-import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
-import { styleVariables } from 'styles';
+import { Col, Row } from 'antd';
+import { CarTypeItem } from 'app/components/CarTypeItem';
 import { TitleMain } from 'app/components/TitleMain';
 import { CarTypeItemModal } from 'app/models';
-import { CarTypeItem } from 'app/components/CarTypeItem';
-import { Col, Row } from 'antd';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import styled from 'styled-components/macro';
+import { styleVariables } from 'styles';
 
 interface Props {}
 
@@ -37,9 +36,9 @@ export function CarTypePage() {
     },
   ];
 
-  const renderCarTypeList = carTypeList.map((item, index) =>
-    CarTypeItem(item, index),
-  );
+  const renderCarTypeList = carTypeList.map((item, index) => (
+    <CarTypeItem {...item} index={index} key={index} />
+  ));
   return (
     <CarTypeWrapper>
       <TitleMain name="LOẠI XE" />

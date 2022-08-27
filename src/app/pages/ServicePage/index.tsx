@@ -46,7 +46,9 @@ export function ServicePage() {
   ];
 
   const renderServiceItem = ServiceItems.map((item, index) => (
-    <Col sm={12}>{ServiceItem(item, index)}</Col>
+    <Col key={index} sm={12}>
+      {ServiceItem(item, index)}
+    </Col>
   ));
 
   return (

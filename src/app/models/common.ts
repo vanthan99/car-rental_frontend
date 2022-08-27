@@ -13,6 +13,7 @@ export interface PostItemModal {
 }
 
 export interface CarTypeItemModal {
+  index?: number;
   title: string;
   description: string;
   imageUrl: string;

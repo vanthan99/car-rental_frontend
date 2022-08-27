@@ -6,18 +6,26 @@
 import { Col, Row } from 'antd';
 import { CarTypeItemModal } from 'app/models';
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
-export const CarTypeItem = (item: CarTypeItemModal, index: number) => {
-  const { description, redirectUrl, imageUrl, title } = item;
-  const [temp, setTemp] = useState(true);
+import { MobilScreenSize } from 'styles/commons';
+export const CarTypeItem = (item: CarTypeItemModal) => {
+  const { description, redirectUrl, imageUrl, title, index } = item;
+  const isMobileScreen = useMediaQuery(MobilScreenSize);
   return (
     <Row justify="center" style={{ marginTop: '2rem' }} key={index}>
       <Col>
         <CarTypeItemWrapper>
           <Row justify="space-between" gutter={[16, 16]}>
-            <Col xs={24} sm={10} order={index % 2 === 0 ? 0 : 1}>
+            <Col
+              xs={24}
+              sm={10}
+              order={
+                !isMobileScreen && index != undefined && index % 2 === 0 ? 0 : 1
+              }
+            >
               <ImageWrapper to={redirectUrl}>
                 <_Image src={imageUrl} />
               </ImageWrapper>

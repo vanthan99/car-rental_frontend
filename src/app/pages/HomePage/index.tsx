@@ -1,6 +1,5 @@
 import { Col, Row } from 'antd';
 import { CarTypeItem } from 'app/components/CarTypeItem';
-import { CategoryItemTitle } from 'app/components/CategoryItemTitle';
 import { ProcedureItem } from 'app/components/ProcedureItem';
 import { ServiceItem } from 'app/components/ServiceItem';
 import {
@@ -15,6 +14,8 @@ import Rotate from 'react-reveal/Rotate';
 import Slide from 'react-reveal/Slide';
 import styled from 'styled-components';
 import { styleVariables } from 'styles';
+import Fade from 'react-reveal/Fade';
+import { CategoryItemTitle } from 'app/components/CategoryItemTitle';
 const carTypeList: Array<CarTypeItemModal> = [
   {
     title: 'cho thuê xe 4 chỗ',
@@ -68,7 +69,9 @@ const renderProcedureList = procedureList.map((item, index) => (
 ));
 
 const renderCarTypeList = carTypeList.map((item, index) => (
-  <Slide bottom>{CarTypeItem(item, index)}</Slide>
+  <Slide key={index} bottom>
+    <CarTypeItem {...item} index={index} />
+  </Slide>
 ));
 
 const ServiceItems: Array<ServiceItemModal> = [
@@ -107,11 +110,6 @@ const renderServiceItem = ServiceItems.map((item, index) => (
 ));
 
 export function HomePage() {
-  // const isBigScreen = useMediaQuery({ query: '(max-width: 765px)' })
-  // console.log(isBigScreen);
-  // const [temp,setTemp] = React.useState(true);
-  // console.log(temp);
-
   return (
     <>
       <Helmet>
@@ -143,9 +141,15 @@ export function HomePage() {
         <Row justify="center">
           <Col sm={18}>
             <Row justify="center">
-              <Col>
-                {CategoryItemTitle('Loại xe', 'Cho thuê các dòng xe đời mới')}
-              </Col>
+              <Fade bottom>
+                <Col>
+                  <CategoryItemTitle
+                    title="loại xe"
+                    description="Cho thuê các dòng xe đời mới"
+                    textColorDark
+                  />
+                </Col>
+              </Fade>
             </Row>
             <Row>{renderCarTypeList}</Row>
           </Col>
@@ -156,12 +160,14 @@ export function HomePage() {
         <Row justify="center">
           <Col sm={18}>
             <Row justify="center">
-              <Col>
-                {CategoryItemTitle(
-                  'thủ tục đặt xe',
-                  'Cho thuê các dòng xe đời mới',
-                )}
-              </Col>
+              <Fade bottom>
+                <Col>
+                  <CategoryItemTitle
+                    title="thủ tục đặt xe"
+                    description="Cho thuê các dòng xe đời mới"
+                  />
+                </Col>
+              </Fade>
             </Row>
             <Row justify="center" gutter={[16, 16]}>
               {renderProcedureList}
@@ -174,12 +180,16 @@ export function HomePage() {
         <Row justify="center">
           <Col sm={18}>
             <Row justify="center">
-              <Col>
-                {CategoryItemTitle(
-                  'dịch vụ cho thuê xe',
-                  'Cho thuê các dòng xe đời mới',
-                )}
-              </Col>
+              <Fade bottom>
+                <Col>
+                  <CategoryItemTitle
+                    title="dịch vụ cho thuê xe"
+                    description="Cho thuê các dòng xe đời mới"
+                    textColorDark
+                    iconColorDark
+                  />
+                </Col>
+              </Fade>
             </Row>
             <Row justify="center">
               <Col sm={18}>
