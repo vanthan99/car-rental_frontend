@@ -102,16 +102,16 @@ export const Footer = () => {
           <ServiceTitle>DỊCH VỤ</ServiceTitle>
           <Ul>
             <Li>
-              <_NavLink to="/">CHO THUÊ XE TỰ LÁI</_NavLink>
+              <_NavLink to="/7">CHO THUÊ XE TỰ LÁI</_NavLink>
             </Li>
             <Li>
-              <_NavLink to="/">CHO THUÊ XE CÓ TÀI</_NavLink>
+              <_NavLink to="/8">CHO THUÊ XE CÓ TÀI</_NavLink>
             </Li>
             <Li>
-              <_NavLink to="/">NHẬN KÝ GỬI XE</_NavLink>
+              <_NavLink to="/9">NHẬN KÝ GỬI XE</_NavLink>
             </Li>
             <Li>
-              <_NavLink to="/">CHO THUÊ XE HOA</_NavLink>
+              <_NavLink to="/10">CHO THUÊ XE HOA</_NavLink>
             </Li>
           </Ul>
         </Col>

@@ -29,7 +29,7 @@ export const Header = () => {
   const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
   const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
   return (
-    <HeaderWrapper onBlur={toggleMobileMenu}>
+    <HeaderWrapper>
       <TopHeaderWrapper hidden={isMediumScreen ? true : false}>
         <Row
           justify="center"

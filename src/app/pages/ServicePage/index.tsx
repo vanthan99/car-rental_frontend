@@ -23,25 +23,25 @@ export function ServicePage() {
       imageUrl:
         'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z340534869004776aec2e23062d0c162d372845fde8868-7783.jpg?alt=media&token=c6827636-f377-4d6a-b6d9-11c47728c77c',
       title: 'CHO THUÊ XE TỰ LÁI',
-      redirectUrl: '/',
+      redirectUrl: '/7',
     },
     {
       imageUrl:
         'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/capture-8099.png?alt=media&token=31a7b93e-c49c-440e-a84b-8919b7ca7141',
       title: 'CHO THUÊ XE CÓ TÀI',
-      redirectUrl: '/',
+      redirectUrl: '/8',
     },
     {
       imageUrl:
         'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/capture-6695.png?alt=media&token=f72f1d34-ec49-43c1-a8ee-1b795281537e',
       title: 'NHẬN KÝ GỬI XE',
-      redirectUrl: '/',
+      redirectUrl: '/9',
     },
     {
       imageUrl:
         'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/thue-xe-hoa-thu-dau-mot-6714.png?alt=media&token=9f1ae422-8bc9-4b83-be7b-6ae95ca97833',
       title: 'CHO THUÊ XE HOA',
-      redirectUrl: '/',
+      redirectUrl: '/10',
     },
   ];
 

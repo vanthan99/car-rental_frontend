@@ -26,6 +26,8 @@ import { CarTypePage } from './pages/CarTypePage/Loadable';
 import { ActivityPage } from './pages/ActivityPage/Loadable';
 import { ContactPage } from './pages/ContactPage/Loadable';
 import { BackTop } from 'antd';
+import { Article } from './components/Article/Loadable';
+import { ArticlePage } from './pages/ArticlePage/Loadable';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -58,6 +60,7 @@ export function App() {
               <Route exact path="/type" component={CarTypePage} />
               <Route exact path="/activity" component={ActivityPage} />
               <Route exact path="/contact" component={ContactPage} />
+              <Route exact path="/:articleName" component={ArticlePage} />
             </Switch>
           </MainLayout>
         </Route>
