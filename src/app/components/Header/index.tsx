@@ -3,42 +3,29 @@
  * Header
  *
  */
-import * as React from 'react';
-import styled, { css } from 'styled-components/macro';
-import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
-import {
-  Col,
-  Collapse,
-  Divider,
-  Image,
-  List,
-  Row,
-  Space,
-  Typography,
-} from 'antd';
-import { Link, NavLink, useHistory } from 'react-router-dom';
-import Search from 'antd/lib/input/Search';
-import { styleVariables } from 'styles';
 import { FacebookOutlined, SearchOutlined } from '@ant-design/icons';
-import { sizes } from 'styles/media';
+import { Col, List, Row, Space, Typography } from 'antd';
+import * as React from 'react';
+import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
+import { Link, NavLink } from 'react-router-dom';
+import styled from 'styled-components/macro';
+import { styleVariables } from 'styles';
+import { MobilScreenSize } from 'styles/commons';
+import Roll from 'react-reveal/Roll';
+import Bounce from 'react-reveal/Bounce';
 const { Text } = Typography;
-interface Props {}
-
 const onSearch = (value: string) => console.log(value);
-const TopHeaderWrapper = styled.span`
-  display: block;
-
-  @media (max-width: 576px) {
-    display: none;
-  }
-`;
-export function Header(props: Props) {
+const TopHeaderWrapper = styled.span``;
+export const Header = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
+  const isMobileScreen = useMediaQuery(MobilScreenSize);
+  const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
+  const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
   return (
     <HeaderWrapper>
-      <TopHeaderWrapper>
+      <TopHeaderWrapper hidden={isMobileScreen ? true : false}>
         <Row
           justify="center"
           align="middle"
@@ -68,7 +55,7 @@ export function Header(props: Props) {
         </Row>
       </TopHeaderWrapper>
       <MenuWrapper>
-        <DeskTopMenu>
+        <DeskTopMenu hidden={isMobileScreen ? true : false}>
           <ImageWrapper to="/">
             <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
           </ImageWrapper>
@@ -154,23 +141,74 @@ export function Header(props: Props) {
             </div>
           </div>
         </DeskTopMenu>
-        <MobileMenu>
+        <MobileMenu hidden={isMobileScreen ? false : true}>
           <MobileMenuBar>
-            <_Hamburger to="#">
+            <_Hamburger to="#" onClick={toggleMobileMenu}>
               <span></span>
             </_Hamburger>
             <MobileLogo to="/">
               <MobileLogoImage src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
             </MobileLogo>
             <MobileSearchWrapper>
-              <SearchOutlined />
+              <SearchOutlined style={{ fontSize: '17px' }} />
             </MobileSearchWrapper>
           </MobileMenuBar>
         </MobileMenu>
+        {isShowMobileMenu && (
+          <MobileMenuWrapper id="mobile_header_menu">
+            <List
+              size="small"
+              header={
+                <Bounce top>
+                  <div style={{ textAlign: 'center' }}>Menu</div>
+                </Bounce>
+              }
+              bordered
+              dataSource={navigationData}
+              renderItem={item => (
+                <Roll left cascade>
+                  <List.Item
+                    onClick={toggleMobileMenu}
+                    style={{ justifyContent: 'center' }}
+                  >
+                    <_NavLink to={item.path}>{item.name}</_NavLink>
+                  </List.Item>
+                </Roll>
+              )}
+            />
+          </MobileMenuWrapper>
+        )}
       </MenuWrapper>
     </HeaderWrapper>
   );
-}
+};
+const navigationData = [
+  {
+    name: 'trang chủ',
+    path: '/',
+  },
+  {
+    name: 'Giới thiệu',
+    path: '/about',
+  },
+  {
+    name: 'dịch vụ',
+    path: '/service',
+  },
+  {
+    name: 'loại xe',
+    path: '/type',
+  },
+  {
+    name: 'hoạt động',
+    path: '/activity',
+  },
+  {
+    name: 'liên hệ',
+    path: '/contact',
+  },
+];
+const MobileMenuWrapper = styled.div``;
 
 const MobileSearchWrapper = styled.div`
   position: relative;
@@ -274,15 +312,12 @@ const MobileMenuBar = styled.div`
 `;
 
 const MobileMenu = styled.div`
-  display: none;
+  display: block;
   height: 70px;
   z-index: 10;
   background: #fff;
   position: relative;
   line-height: normal;
-  @media (max-width: 575px) {
-    display: block;
-  }
 `;
 
 const SearchButton = styled.p`
@@ -422,17 +457,6 @@ const HeaderWrapper = styled.header`
   // background-color: ${styleVariables.BACKGROUND_COLOR};
 `;
 
-// const _NavLink = styled(NavLink)`
-//   color: ${styleVariables.TEXT_COLOR_BLACK};
-//   font-size: ${styleVariables.TEXT_FONT_SIZE_LV3};
-//   transition: ${styleVariables.TRANSITION};
-
-//   &:hover {
-//     color: ${styleVariables.TEXT_COLOR_HOVER};
-//     font-size: ${styleVariables.TEXT_FONT_SIZE_LV3};
-//   }
-// `;
-
 const MenuWrapper = styled.div`
   background-color: #fff;
   padding: 13px 0;
@@ -443,8 +467,5 @@ const DeskTopMenu = styled.div`
   width: calc(100% - 20px);
   align-items: center !important;
   justify-content: space-between !important;
-  display: none;
-  @media (min-width: 576px) {
-    display: flex;
-  }
+  display: flex;
 `;

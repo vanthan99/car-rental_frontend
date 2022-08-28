@@ -18,6 +18,7 @@ import Fade from 'react-reveal/Fade';
 import { CategoryItemTitle } from 'app/components/CategoryItemTitle';
 import Slider from 'react-slick';
 import { MobilScreenSize } from 'styles/commons';
+import { SlideShow } from 'app/components/SlideShow/Loadable';
 const carTypeList: Array<CarTypeItemModal> = [
   {
     title: 'cho thuê xe 4 chỗ',
@@ -132,7 +133,7 @@ export function HomePage() {
         <Col sm={18}>
           <Row justify="center" align="middle">
             <Col sm={24}>
-              <p
+              {/* <p
                 style={{
                   width: '100%',
                   height: '300px',
@@ -143,7 +144,8 @@ export function HomePage() {
                 }}
               >
                 This is slider/banner
-              </p>
+              </p> */}
+              <SlideShow />
             </Col>
           </Row>
         </Col>

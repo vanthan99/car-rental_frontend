@@ -6,21 +6,53 @@
 import * as React from 'react';
 import styled from 'styled-components/macro';
 import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
+import Slider from 'react-slick';
 
-interface Props {}
-
-export function SlideShow(props: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const SlideShow = () => {
   const { t, i18n } = useTranslation();
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
+  };
+  const DemoBox = styled.div`
+    height: 300px;
+    background-color: #557be1;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
   return (
-    <Div>
-      {t('')}
-      {/*  {t(...messages.someThing())}  */}
-      this is slide show
-    </Div>
+    <SlideShowWrapper>
+      <Slider {...settings}>
+        <DemoBox>
+          <h3>1</h3>
+        </DemoBox>
+        <DemoBox>
+          <h3>2</h3>
+        </DemoBox>
+        <DemoBox>
+          <h3>3</h3>
+        </DemoBox>
+        <DemoBox>
+          <h3>4</h3>
+        </DemoBox>
+        <DemoBox>
+          <h3>5</h3>
+        </DemoBox>
+        <DemoBox>
+          <h3>6</h3>
+        </DemoBox>
+      </Slider>
+    </SlideShowWrapper>
   );
-}
+};
 
-const Div = styled.div``;
+const SlideShowWrapper = styled.div``;
