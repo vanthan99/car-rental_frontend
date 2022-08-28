@@ -3,7 +3,11 @@
  * Header
  *
  */
-import { FacebookOutlined, SearchOutlined } from '@ant-design/icons';
+import {
+  FacebookOutlined,
+  MenuOutlined,
+  SearchOutlined,
+} from '@ant-design/icons';
 import { Col, List, Row, Space, Typography } from 'antd';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -14,18 +18,19 @@ import { styleVariables } from 'styles';
 import { MobilScreenSize } from 'styles/commons';
 import Roll from 'react-reveal/Roll';
 import Bounce from 'react-reveal/Bounce';
+import { sizes } from 'styles/media';
 const { Text } = Typography;
 const onSearch = (value: string) => console.log(value);
 const TopHeaderWrapper = styled.span``;
 export const Header = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
-  const isMobileScreen = useMediaQuery(MobilScreenSize);
+  const isMediumScreen = useMediaQuery({ maxWidth: sizes.medium });
   const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
   const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
   return (
-    <HeaderWrapper>
-      <TopHeaderWrapper hidden={isMobileScreen ? true : false}>
+    <HeaderWrapper onBlur={toggleMobileMenu}>
+      <TopHeaderWrapper hidden={isMediumScreen ? true : false}>
         <Row
           justify="center"
           align="middle"
@@ -55,7 +60,7 @@ export const Header = () => {
         </Row>
       </TopHeaderWrapper>
       <MenuWrapper>
-        <DeskTopMenu hidden={isMobileScreen ? true : false}>
+        <DeskTopMenu hidden={isMediumScreen ? true : false}>
           <ImageWrapper to="/">
             <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
           </ImageWrapper>
@@ -141,10 +146,10 @@ export const Header = () => {
             </div>
           </div>
         </DeskTopMenu>
-        <MobileMenu hidden={isMobileScreen ? false : true}>
+        <MobileMenu hidden={isMediumScreen ? false : true}>
           <MobileMenuBar>
-            <_Hamburger to="#" onClick={toggleMobileMenu}>
-              <span></span>
+            <_Hamburger onClick={toggleMobileMenu}>
+              <MenuOutlined />
             </_Hamburger>
             <MobileLogo to="/">
               <MobileLogoImage src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
@@ -251,7 +256,7 @@ const MobileLogo = styled(Link)`
   }
 `;
 
-const _Hamburger = styled(Link)`
+const _Hamburger = styled.div`
   display: block;
   width: 30px;
   height: 23px;
@@ -260,43 +265,43 @@ const _Hamburger = styled(Link)`
   outline: none;
   padding: 0px;
 
-  color: #007bff;
+  color: black;
   text-decoration: none;
   background-color: transparent;
 
-  &:before {
-    -webkit-transition: none 0.5s ease 0.5s;
-    transition: none 0.5s ease 0.5s;
-    -webkit-transition-property: transform, top, bottom, left, opacity;
-    transition-property: transform, top, bottom, left, opacity;
+  // &:before {
+  //   -webkit-transition: none 0.5s ease 0.5s;
+  //   transition: none 0.5s ease 0.5s;
+  //   -webkit-transition-property: transform, top, bottom, left, opacity;
+  //   transition-property: transform, top, bottom, left, opacity;
 
-    top: 0px;
+  //   top: 0px;
 
-    background: #000;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    left: 0px;
-  }
+  //   background: #000;
+  //   content: '';
+  //   display: block;
+  //   width: 100%;
+  //   height: 2px;
+  //   position: absolute;
+  //   left: 0px;
+  // }
 
-  &:after {
-    -webkit-transition: none 0.5s ease 0.5s;
-    transition: none 0.5s ease 0.5s;
-    -webkit-transition-property: transform, top, bottom, left, opacity;
-    transition-property: transform, top, bottom, left, opacity;
+  // &:after {
+  //   -webkit-transition: none 0.5s ease 0.5s;
+  //   transition: none 0.5s ease 0.5s;
+  //   -webkit-transition-property: transform, top, bottom, left, opacity;
+  //   transition-property: transform, top, bottom, left, opacity;
 
-    top: 20px;
+  //   top: 20px;
 
-    background: #000;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    left: 0px;
-  }
+  //   background: #000;
+  //   content: '';
+  //   display: block;
+  //   width: 100%;
+  //   height: 2px;
+  //   position: absolute;
+  //   left: 0px;
+  // }
 `;
 
 const MobileMenuBar = styled.div`

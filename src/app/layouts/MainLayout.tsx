@@ -22,5 +22,5 @@ export function MainLayout({ children }) {
 }
 
 const MainWrapper = styled.main`
-  min-height: 500px;
+  // min-height: 500px;
 `;

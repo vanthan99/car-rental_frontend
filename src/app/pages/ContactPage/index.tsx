@@ -10,13 +10,19 @@ import { messages } from './messages';
 import { Contact } from 'app/components/Contact/Loadable';
 import { GoogleMapExtenstion } from 'app/components/GoogleMapExtenstion/Loadable';
 import { styleVariables } from 'styles';
+import { useMediaQuery } from 'react-responsive';
+import { MobilScreenSize } from 'styles/commons';
 
 interface Props {}
 
-export function ContactPage() {
+export const ContactPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
-
+  const isMobileScreen = useMediaQuery(MobilScreenSize);
+  const ContactPageWrapper = styled.div`
+    background-color: ${styleVariables.BACKGROUND_COLOR};
+    padding: ${isMobileScreen ? '2rem 10px' : '2rem 0'};
+  `;
   return (
     <ContactPageWrapper>
       {t('')}
@@ -24,10 +30,4 @@ export function ContactPage() {
       <Contact />
     </ContactPageWrapper>
   );
-}
-
-const ContactPageWrapper = styled.div`
-  background-color: ${styleVariables.BACKGROUND_COLOR};
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-`;
+};

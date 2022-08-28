@@ -11,10 +11,17 @@ import { styleVariables } from 'styles';
 import { TitleMain } from 'app/components/TitleMain';
 import { Col, Image, Row } from 'antd';
 import { Share } from 'app/components/Share';
+import { useMediaQuery } from 'react-responsive';
+import { MobilScreenSize } from 'styles/commons';
 
 interface Props {}
 
-export function AboutPage() {
+export const AboutPage = () => {
+  const isMobileScreen = useMediaQuery(MobilScreenSize);
+  const AboutPageWrapper = styled.div`
+    background-color: ${styleVariables.BACKGROUND_COLOR};
+    padding: ${isMobileScreen ? '2rem 10px' : '2rem 0'};
+  `;
   return (
     <AboutPageWrapper>
       <TitleMain name="CHO THUÊ XE TỰ LÁI TRÍ TIN BÌNH DƯƠNG" />
@@ -164,7 +171,7 @@ export function AboutPage() {
       </Row>
     </AboutPageWrapper>
   );
-}
+};
 
 const AboutPageWrapper = styled.div`
   background-color: ${styleVariables.BACKGROUND_COLOR};
