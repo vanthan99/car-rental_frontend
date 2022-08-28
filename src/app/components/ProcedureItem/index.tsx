@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
 
-export function ProcedureItem(item: ProcedureItemModal) {
+export const ProcedureItem = (item: ProcedureItemModal) => {
   const { imageUrl, redirectUrl, title } = item;
   return (
     <ProcedureItemWrapper>
@@ -28,7 +28,7 @@ export function ProcedureItem(item: ProcedureItemModal) {
       </h3>
     </ProcedureItemWrapper>
   );
-}
+};
 const _Link = styled(Link)`
   -webkit-line-clamp: 1;
   color: #fff;

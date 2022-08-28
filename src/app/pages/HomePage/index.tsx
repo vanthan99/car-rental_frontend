@@ -16,6 +16,8 @@ import styled from 'styled-components';
 import { styleVariables } from 'styles';
 import Fade from 'react-reveal/Fade';
 import { CategoryItemTitle } from 'app/components/CategoryItemTitle';
+import Slider from 'react-slick';
+import { MobilScreenSize } from 'styles/commons';
 const carTypeList: Array<CarTypeItemModal> = [
   {
     title: 'cho thuê xe 4 chỗ',
@@ -63,9 +65,7 @@ const procedureList: Array<ProcedureItemModal> = [
 ];
 
 const renderProcedureList = procedureList.map((item, index) => (
-  <Col key={index} sm={6}>
-    {ProcedureItem(item)}
-  </Col>
+  <ProcedureItem {...item} />
 ));
 
 const renderCarTypeList = carTypeList.map((item, index) => (
@@ -110,6 +110,18 @@ const renderServiceItem = ServiceItems.map((item, index) => (
 ));
 
 export function HomePage() {
+  const isMobileScreen = useMediaQuery(MobilScreenSize);
+  const slickSettings = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    slidesToShow: isMobileScreen ? 1 : 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    cssEase: 'linear',
+    arrows: false,
+  };
   return (
     <>
       <Helmet>
@@ -170,7 +182,9 @@ export function HomePage() {
               </Fade>
             </Row>
             <Row justify="center" gutter={[16, 16]}>
-              {renderProcedureList}
+              <Col>
+                <Slider {...slickSettings}>{renderProcedureList}</Slider>
+              </Col>
             </Row>
           </Col>
         </Row>
