@@ -6,13 +6,52 @@
 import { Col, Divider, List, Row, Typography } from 'antd';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
+import { MobilScreenSize } from 'styles/commons';
+import CSS from 'csstype';
 const { Paragraph, Text } = Typography;
-export function Footer() {
+export const Footer = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
+  const isMobile = useMediaQuery(MobilScreenSize);
+  const FooterWrapper = styled.div`
+    width: 100%;
+    min-height: 100px;
+    background-image: url(${styleVariables.BACKGROUND_IMAGE_FOOTER});
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 20px 0 0 0;
+  `;
+
+  const _NavLink = styled(NavLink)`
+    color: ${styleVariables.TEXT_COLOR_WHITE};
+
+    &:hover {
+      color: ${styleVariables.BACKGROUND_COLOR};
+    }
+  `;
+
+  const Ul = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  `;
+
+  const Li = styled.li`
+    height: 2rem;
+    border-bottom: 1px solid ${styleVariables.COLOR_GRAY};
+    margin-bottom: 1rem;
+    width: 50%;
+  `;
+
+  const CompanyInfoItem = styled.p`
+    color: ${styleVariables.TEXT_COLOR_WHITE};
+    font-size: 14px;
+  `;
 
   const Title = styled.p`
     text-transform: uppercase;
@@ -38,9 +77,13 @@ export function Footer() {
       left: 0;
     }
   `;
+
+  const rowStyles: CSS.Properties = {
+    padding: isMobile ? '0 10px' : 0,
+  };
   return (
     <FooterWrapper>
-      <Row justify="center">
+      <Row justify="center" style={rowStyles}>
         <Col xs={24} sm={10}>
           <Title>CHO THUÊ XE TỰ LÁI TRÍ TÍN</Title>
           <Paragraph>
@@ -74,6 +117,7 @@ export function Footer() {
         </Col>
       </Row>
       <Row
+        style={rowStyles}
         justify="center"
         css={{
           backgroundColor: styleVariables.BACKGROUND_COLOR3,
@@ -98,45 +142,4 @@ export function Footer() {
       </Row>
     </FooterWrapper>
   );
-}
-
-const FooterWrapper = styled.div`
-  width: 100%;
-  min-height: 100px;
-  background-image: url(${styleVariables.BACKGROUND_IMAGE_FOOTER});
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  padding: 20px 0 0 0;
-
-  // display: flex !important;
-  @media (max-width: 576px) {
-    padding: 0 10px;
-  }
-`;
-
-const _NavLink = styled(NavLink)`
-  color: ${styleVariables.TEXT_COLOR_WHITE};
-
-  &:hover {
-    color: ${styleVariables.BACKGROUND_COLOR};
-  }
-`;
-
-const Ul = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
-
-const Li = styled.li`
-  height: 2rem;
-  border-bottom: 1px solid ${styleVariables.COLOR_GRAY};
-  margin-bottom: 1rem;
-  width: 50%;
-`;
-
-const CompanyInfoItem = styled.p`
-  color: ${styleVariables.TEXT_COLOR_WHITE};
-  font-size: 14px;
-`;
+};
