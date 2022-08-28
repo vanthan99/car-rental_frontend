@@ -28,6 +28,8 @@ import reportWebVitals from 'reportWebVitals';
 import './locales/i18n';
 
 import 'antd/dist/antd.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { Context } from 'react-responsive';
 
 const store = configureAppStore();
