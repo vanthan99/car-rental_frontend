@@ -44,7 +44,7 @@ ReactDOMClient.createRoot(MOUNT_NODE!).render(
     </HelmetProvider>
   </Provider>,
 );
-
+// vanthan_temp test
 // Hot reloadable translation json files
 if (module.hot) {
   module.hot.accept(['./locales/i18n'], () => {
