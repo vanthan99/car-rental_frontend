@@ -19,6 +19,7 @@ import { MobilScreenSize } from 'styles/commons';
 import Roll from 'react-reveal/Roll';
 import Bounce from 'react-reveal/Bounce';
 import { sizes } from 'styles/media';
+import { SiteMap } from 'app/models';
 const { Text } = Typography;
 const onSearch = (value: string) => console.log(value);
 const TopHeaderWrapper = styled.span``;
@@ -28,6 +29,7 @@ export const Header = () => {
   const isMediumScreen = useMediaQuery({ maxWidth: sizes.medium });
   const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
   const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
+  const { ABOUT, ACTIVITY, CONTACT, HOME, SERVICE, TYPE } = SiteMap;
   return (
     <HeaderWrapper>
       <TopHeaderWrapper hidden={isMediumScreen ? true : false}>
@@ -92,46 +94,46 @@ export const Header = () => {
                 }}
               >
                 <Li>
-                  <_NavLink to="/">trang chủ</_NavLink>
+                  <_NavLink to={HOME.path}>{HOME.name}</_NavLink>
                 </Li>
                 <Li>
                   <_NavLink
                     activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to="/about"
+                    to={ABOUT.path}
                   >
-                    giới thiệu
+                    {ABOUT.name}
                   </_NavLink>
                 </Li>
                 <Li>
                   <_NavLink
                     activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to="/service"
+                    to={SERVICE.path}
                   >
-                    dịch vụ
+                    {SERVICE.name}
                   </_NavLink>
                 </Li>
                 <Li>
                   <_NavLink
                     activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to="/type"
+                    to={TYPE.path}
                   >
-                    loại xe
+                    {TYPE.name}
                   </_NavLink>
                 </Li>
                 <Li>
                   <_NavLink
                     activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to="/activity"
+                    to={ACTIVITY.path}
                   >
-                    hoạt động
+                    {ACTIVITY.name}
                   </_NavLink>
                 </Li>
                 <Li>
                   <_NavLink
                     activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to="/contact"
+                    to={CONTACT.path}
                   >
-                    liên hệ
+                    {CONTACT.name}
                   </_NavLink>
                 </Li>
                 <Li style={{ marginLeft: 'auto' }}>

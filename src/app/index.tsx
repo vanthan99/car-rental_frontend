@@ -18,7 +18,7 @@ import { useTranslation } from 'react-i18next';
 import { MainLayout } from './layouts/MainLayout';
 import { GoogleMapExtenstion } from './components/GoogleMapExtenstion';
 import { Footer } from './components/Footer';
-import { AdminLayout } from './layouts';
+import { AdminLayout, HomeLayout } from './layouts';
 import { AdminNotFoundPage } from './components/AdminNotFoundPage';
 import { AboutPage } from './pages/AboutPage/Loadable';
 import { ServicePage } from './pages/ServicePage/Loadable';
@@ -28,9 +28,11 @@ import { ContactPage } from './pages/ContactPage/Loadable';
 import { BackTop } from 'antd';
 import { Article } from './components/Article/Loadable';
 import { ArticlePage } from './pages/ArticlePage/Loadable';
+import { SiteMap } from './models';
 
 export function App() {
   const { i18n } = useTranslation();
+  const { ABOUT, ACTIVITY, CONTACT, HOME, SERVICE, TYPE } = SiteMap;
   return (
     <BrowserRouter>
       <Helmet
@@ -49,17 +51,24 @@ export function App() {
             </Switch>
           </AdminLayout>
         </Route>
-        {/* <Route component={NotFoundPage} /> */}
+
+        <Route exact path={['/']}>
+          <HomeLayout>
+            <Switch>
+              <Route exact path={HOME.path} component={HomePage} />
+            </Switch>
+          </HomeLayout>
+        </Route>
+
         <Route>
           <MainLayout>
             <Switch>
-              <Route exact path="/" component={HomePage} />
               <Route exact path="/test" component={GoogleMapExtenstion} />
-              <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/service" component={ServicePage} />
-              <Route exact path="/type" component={CarTypePage} />
-              <Route exact path="/activity" component={ActivityPage} />
-              <Route exact path="/contact" component={ContactPage} />
+              <Route exact path={ABOUT.path} component={AboutPage} />
+              <Route exact path={SERVICE.path} component={ServicePage} />
+              <Route exact path={TYPE.path} component={CarTypePage} />
+              <Route exact path={ACTIVITY.path} component={ActivityPage} />
+              <Route exact path={CONTACT.path} component={ContactPage} />
               <Route exact path="/:articleName" component={ArticlePage} />
             </Switch>
           </MainLayout>
