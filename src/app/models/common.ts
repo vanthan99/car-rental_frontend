@@ -41,6 +41,62 @@ export interface PostModal {
   contentDecoder?: string;
 }
 
+export const SiteMap = {
+  HOME: {
+    path: '/',
+    name: 'Trang Chủ',
+  },
+
+  ABOUT: {
+    path: '/about',
+    name: 'Giới Thiệu',
+  },
+  SERVICE: {
+    path: '/service',
+    name: 'Dịch Vụ',
+  },
+  TYPE: {
+    path: '/type',
+    name: 'Loại Xe',
+  },
+  ACTIVITY: {
+    path: '/activity',
+    name: 'Hoạt Động',
+  },
+  CONTACT: {
+    path: '/contact',
+    name: 'Liên Hệ',
+  },
+};
+
+export const SiteMapArray = [
+  {
+    path: '/',
+    name: 'Trang Chủ',
+  },
+
+  {
+    path: '/about',
+    name: 'Giới Thiệu',
+  },
+  {
+    path: '/service',
+    name: 'Dịch Vụ',
+  },
+  {
+    path: '/type',
+    name: 'Loại Xe',
+  },
+  {
+    path: '/activity',
+    name: 'Hoạt Động',
+  },
+  {
+    path: '/contact',
+    name: 'Liên Hệ',
+  },
+];
+
 // testing
 export const PostList: Array<PostModal> = [
   {
