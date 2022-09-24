@@ -71,6 +71,7 @@ export function App() {
               <Route exact path={CONTACT.path} component={ContactPage} />
               <Route exact path="/:articleName" component={ArticlePage} />
             </Switch>
+            {/* thantest */}
           </MainLayout>
         </Route>
         <Route component={NotFoundPage} />
