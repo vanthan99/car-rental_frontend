@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import TextArea from 'antd/lib/input/TextArea';
 import { styleVariables } from 'styles';
 import { TitleMain } from '../TitleMain';
+import { CompanyInfo } from 'app/models';
 const { Title, Text, Paragraph } = Typography;
 
 const { Option } = Select;
@@ -56,18 +57,13 @@ export const Contact = () => {
       </Row>
       <Row justify="center">
         <Col sm={9}>
-          <CompanyTitle>CHO THUÊ XE TỰ LÁI TRÍ TÍN</CompanyTitle>
+          <CompanyTitle>{CompanyInfo.DESCRIPTION}</CompanyTitle>
           <CompanyInfoItem>
-            Địa Chỉ:{' '}
-            <Link to="/">
-              D1-109 Nhà ở an sinh xã hội becamex, Định Hoà, Thủ Dầu Một, Bình
-              Dương
-            </Link>
+            Địa Chỉ: <Link to="/">{CompanyInfo.ADDRESS}</Link>
           </CompanyInfoItem>
-          <CompanyInfoItem>Hotline: 0382936939 - 0902927936</CompanyInfoItem>
-          <CompanyInfoItem>Email:congtri1410@gmail.com</CompanyInfoItem>
+          <CompanyInfoItem>Hotline: {CompanyInfo.PHONE_NUMBER}</CompanyInfoItem>
           <CompanyInfoItem>
-            Website: <Link to="/">http://xetulaitritin.com</Link>
+            Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
           </CompanyInfoItem>
         </Col>
         <Col sm={9}>
@@ -138,6 +134,23 @@ export const Contact = () => {
               </Space>
             </Row>
           </Form>
+        </Col>
+      </Row>
+      <Row
+        justify="center"
+        css={{
+          marginTop: '2rem',
+        }}
+      >
+        <Col sm={18}>
+          <div>
+            <iframe
+              style={{ border: 0, width: '100%', height: '270px' }}
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+              frameBorder={0}
+              allowFullScreen
+            />
+          </div>
         </Col>
       </Row>
     </ContactWrapper>
