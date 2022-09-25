@@ -18,12 +18,14 @@ export default function _Breadcrumb() {
   return (
     <Row justify="center" align="middle" style={{ margin: '1rem 0' }}>
       <Col
-        sm={18}
+        xl={23}
+        xxl={18}
         style={{
           backgroundColor: '#eee',
           height: '3rem',
           alignItems: 'center',
           display: 'flex',
+          padding: '0 1rem',
         }}
       >
         <Breadcrumb>

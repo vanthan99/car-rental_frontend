@@ -26,7 +26,7 @@ export const AboutPage = () => {
     <AboutPageWrapper>
       <TitleMain name="CHO THUÊ XE Ô TÔ TỰ LÁI ĐÔNG HÀ QUẢNG TRỊ" />
       <Row justify="center">
-        <Col sm={18}>
+        <Col xxl={18} xl={23}>
           <Content>
             <div className="content-main w-clear">
               <h1>

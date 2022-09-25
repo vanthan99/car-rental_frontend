@@ -130,7 +130,7 @@ export function HomePage() {
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Row justify="center">
-        <Col sm={18}>
+        <Col xl={24}>
           <Row justify="center" align="middle">
             <Col sm={24}>
               {/* <p
@@ -153,7 +153,7 @@ export function HomePage() {
 
       <CarTypeWrapper>
         <Row justify="center">
-          <Col sm={18}>
+          <Col xl={23} xxl={18}>
             <Row justify="center">
               <Fade bottom>
                 <Col>
@@ -172,7 +172,7 @@ export function HomePage() {
 
       <ProcedureWrapper>
         <Row justify="center">
-          <Col sm={18}>
+          <Col xl={23} xxl={18}>
             <Row justify="center">
               <Fade bottom>
                 <Col>
@@ -194,7 +194,7 @@ export function HomePage() {
 
       <ServiceWrapper>
         <Row justify="center">
-          <Col sm={18}>
+          <Col xl={23} xxl={18}>
             <Row justify="center">
               <Fade bottom>
                 <Col>
@@ -208,7 +208,7 @@ export function HomePage() {
               </Fade>
             </Row>
             <Row justify="center">
-              <Col sm={18}>
+              <Col xl={23} xxl={18}>
                 <Row gutter={[16, 16]}>{renderServiceItem}</Row>
               </Col>
             </Row>

@@ -87,32 +87,40 @@ export const Footer = () => {
   return (
     <FooterWrapper>
       <Row justify="center" style={rowStyles}>
-        <Col xs={24} sm={10}>
-          <Title>{CompanyInfo.DESCRIPTION}</Title>
-          <Paragraph>
-            <CompanyInfoItem>Địa chỉ: {CompanyInfo.ADDRESS}</CompanyInfoItem>
-            <CompanyInfoItem>SĐT: {CompanyInfo.PHONE_NUMBER}</CompanyInfoItem>
-            <CompanyInfoItem>
-              Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
-            </CompanyInfoItem>
-          </Paragraph>
-        </Col>
-        <Col xs={24} sm={8}>
-          <ServiceTitle>DỊCH VỤ</ServiceTitle>
-          <Ul>
-            <Li>
-              <_NavLink to="/7">CHO THUÊ XE TỰ LÁI</_NavLink>
-            </Li>
-            <Li>
-              <_NavLink to="/8">CHO THUÊ XE CÓ TÀI</_NavLink>
-            </Li>
-            <Li>
-              <_NavLink to="/9">NHẬN KÝ GỬI XE</_NavLink>
-            </Li>
-            <Li>
-              <_NavLink to="/10">CHO THUÊ XE HOA</_NavLink>
-            </Li>
-          </Ul>
+        <Col md={23} lg={23} xl={23} xxl={18}>
+          <Row justify="space-between">
+            <Col md={24} lg={24} xl={12}>
+              <Title>{CompanyInfo.DESCRIPTION}</Title>
+              <Paragraph>
+                <CompanyInfoItem>
+                  Địa chỉ: {CompanyInfo.ADDRESS}
+                </CompanyInfoItem>
+                <CompanyInfoItem>
+                  SĐT: {CompanyInfo.PHONE_NUMBER}
+                </CompanyInfoItem>
+                <CompanyInfoItem>
+                  Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
+                </CompanyInfoItem>
+              </Paragraph>
+            </Col>
+            <Col md={24} lg={24} xl={12}>
+              <ServiceTitle>DỊCH VỤ</ServiceTitle>
+              <Ul>
+                <Li>
+                  <_NavLink to="/7">CHO THUÊ XE TỰ LÁI</_NavLink>
+                </Li>
+                <Li>
+                  <_NavLink to="/8">CHO THUÊ XE CÓ TÀI</_NavLink>
+                </Li>
+                <Li>
+                  <_NavLink to="/9">NHẬN KÝ GỬI XE</_NavLink>
+                </Li>
+                <Li>
+                  <_NavLink to="/10">CHO THUÊ XE HOA</_NavLink>
+                </Li>
+              </Ul>
+            </Col>
+          </Row>
         </Col>
       </Row>
       <Row
@@ -123,15 +131,19 @@ export const Footer = () => {
           padding: '1rem 0',
         }}
       >
-        <Col xs={24} sm={12}>
-          <CompanyInfoItem>{CompanyInfo.DESIGN_BY}</CompanyInfoItem>
-        </Col>
-        <Col xs={24} sm={6}>
-          <Row justify="end">
-            <Col>
-              <CompanyInfoItem>
-                Đang online: 1 Tổng truy cập: 13547
-              </CompanyInfoItem>
+        <Col md={23} xl={23} xxl={18}>
+          <Row>
+            <Col md={24} xl={14} sm={12}>
+              <CompanyInfoItem>{CompanyInfo.DESIGN_BY}</CompanyInfoItem>
+            </Col>
+            <Col md={24} xl={10} sm={6}>
+              <Row justify="end">
+                <Col>
+                  <CompanyInfoItem>
+                    Đang online: 1 Tổng truy cập: 13547
+                  </CompanyInfoItem>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Col>

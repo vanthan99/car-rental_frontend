@@ -29,6 +29,7 @@ export const Header = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t, i18n } = useTranslation();
   const isMediumScreen = useMediaQuery({ maxWidth: sizes.medium });
+  const isTabletScreen = useMediaQuery({ maxWidth: sizes.tablet });
   const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
   const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
   const { ABOUT, ACTIVITY, CONTACT, HOME, SERVICE, TYPE } = SiteMap;
@@ -38,7 +39,7 @@ export const Header = () => {
   };
   return (
     <HeaderWrapper>
-      <TopHeaderWrapper hidden={isMediumScreen ? true : false}>
+      <TopHeaderWrapper hidden={isTabletScreen ? true : false}>
         <Row
           justify="center"
           align="middle"
@@ -47,9 +48,9 @@ export const Header = () => {
             height: '3rem',
           }}
         >
-          <Col sm={18}>
+          <Col xl={23} xxl={18}>
             <Row justify="space-between">
-              <Col sm={10}>
+              <Col xl={14}>
                 <ComponentAlignCenter>
                   <AimOutlined
                     style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
@@ -58,7 +59,7 @@ export const Header = () => {
                   <span>{CompanyInfo.ADDRESS}</span>
                 </ComponentAlignCenter>
               </Col>
-              <Col sm={8}>
+              <Col xl={10}>
                 <Row justify="end">
                   <Col>
                     <ComponentAlignCenter>
@@ -81,16 +82,16 @@ export const Header = () => {
         </Row>
       </TopHeaderWrapper>
       <MenuWrapper>
-        <DeskTopMenu hidden={isMediumScreen ? true : false}>
+        <DeskTopMenu hidden={isTabletScreen ? true : false}>
           <Row justify="center" align="middle">
-            <Col sm={18}>
+            <Col xxl={18} xl={23}>
               <Row justify="space-between" align="middle">
-                <Col sm={3}>
+                <Col xl={3}>
                   <ImageWrapper to="/">
                     <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
                   </ImageWrapper>
                 </Col>
-                <Col>
+                <Col xl={21}>
                   <Row align="middle" justify="end">
                     <Space>
                       <_NavLink to={HOME.path}>{HOME.name}</_NavLink>
@@ -141,88 +142,6 @@ export const Header = () => {
               </Row>
             </Col>
           </Row>
-
-          {/* <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-            }}
-          >
-            <div
-              style={{
-                position: 'relative',
-                zIndex: 10,
-              }}
-            >
-              <ul
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-
-                  width: '100%',
-                  padding: 0,
-                  margin: 'auto',
-                  listStyle: 'none',
-                  height: '40px',
-                  lineHeight: '40px',
-                }}
-              >
-                <Li>
-                  <_NavLink to={HOME.path}>{HOME.name}</_NavLink>
-                </Li>
-                <Li>
-                  <_NavLink
-                    activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to={ABOUT.path}
-                  >
-                    {ABOUT.name}
-                  </_NavLink>
-                </Li>
-                <Li>
-                  <_NavLink
-                    activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to={SERVICE.path}
-                  >
-                    {SERVICE.name}
-                  </_NavLink>
-                </Li>
-                <Li>
-                  <_NavLink
-                    activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to={TYPE.path}
-                  >
-                    {TYPE.name}
-                  </_NavLink>
-                </Li>
-                <Li>
-                  <_NavLink
-                    activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to={ACTIVITY.path}
-                  >
-                    {ACTIVITY.name}
-                  </_NavLink>
-                </Li>
-                <Li>
-                  <_NavLink
-                    activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
-                    to={CONTACT.path}
-                  >
-                    {CONTACT.name}
-                  </_NavLink>
-                </Li>
-                <Li style={{ marginLeft: 'auto' }}>
-                  <SearchWrapper>
-                    <_Input type="text" placeholder="Nhập từ khóa cần tìm..." />
-                    <SearchButton>
-                      <SearchOutlined />
-                    </SearchButton>
-                  </SearchWrapper>
-                </Li>
-              </ul>
-            </div>
-          </div> */}
         </DeskTopMenu>
         <MobileMenu hidden={isMediumScreen ? false : true}>
           <MobileMenuBar>

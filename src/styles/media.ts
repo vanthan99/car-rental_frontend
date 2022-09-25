@@ -22,6 +22,7 @@ export const sizes = {
   medium: 1024,
   large: 1440,
   xlarge: 1920,
+  tablet: 1199,
 };
 
 // Iterate through the sizes and create a media template

@@ -51,89 +51,104 @@ export const Contact = () => {
   return (
     <ContactWrapper>
       <Row justify="center">
-        <Col>
+        <Col xl={23} xxl={18}>
           <TitleMain name="LIÊN HỆ" />
         </Col>
       </Row>
       <Row justify="center">
-        <Col sm={9}>
-          <CompanyTitle>{CompanyInfo.DESCRIPTION}</CompanyTitle>
-          <CompanyInfoItem>
-            Địa Chỉ: <Link to="/">{CompanyInfo.ADDRESS}</Link>
-          </CompanyInfoItem>
-          <CompanyInfoItem>Hotline: {CompanyInfo.PHONE_NUMBER}</CompanyInfoItem>
-          <CompanyInfoItem>
-            Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
-          </CompanyInfoItem>
-        </Col>
-        <Col sm={9}>
-          <Form
-            // {...layout}
-            form={form}
-            name="control-hooks"
-            onFinish={onFinish}
-          >
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col sm={12}>
+        <Col md={23} lg={23} xl={23} xxl={18}>
+          <Row justify="space-between">
+            <Col lg={24} xl={14}>
+              <CompanyTitle>{CompanyInfo.DESCRIPTION}</CompanyTitle>
+              <CompanyInfoItem>
+                Địa Chỉ: <Link to="/">{CompanyInfo.ADDRESS}</Link>
+              </CompanyInfoItem>
+              <CompanyInfoItem>
+                Hotline: {CompanyInfo.PHONE_NUMBER}
+              </CompanyInfoItem>
+              <CompanyInfoItem>
+                Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
+              </CompanyInfoItem>
+            </Col>
+            <Col lg={24} xl={10}>
+              <Form
+                // {...layout}
+                form={form}
+                name="control-hooks"
+                onFinish={onFinish}
+              >
+                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                  <Col sm={12}>
+                    <Form.Item
+                      name="name"
+                      rules={[
+                        { required: true, message: 'Vui lòng nhập họ tên!' },
+                      ]}
+                    >
+                      <Input size="large" placeholder="Họ tên" />
+                    </Form.Item>
+                  </Col>
+                  <Col sm={12}>
+                    <Form.Item
+                      name="phoneNumber"
+                      rules={[
+                        {
+                          required: true,
+                          message: 'Vui lòng nhập số điện thoại!',
+                        },
+                      ]}
+                    >
+                      <Input size="large" placeholder="Số điện thoại" />
+                    </Form.Item>
+                  </Col>
+                  <Col sm={12}>
+                    <Form.Item
+                      name="address"
+                      rules={[
+                        { required: true, message: 'Vui lòng nhập địa chỉ!' },
+                      ]}
+                    >
+                      <Input size="large" placeholder="Địa chỉ" />
+                    </Form.Item>
+                  </Col>
+                  <Col sm={12}>
+                    <Form.Item
+                      name="email"
+                      rules={[
+                        { required: true, message: 'Vui lòng nhập email!' },
+                      ]}
+                    >
+                      <Input size="large" placeholder="Email" />
+                    </Form.Item>
+                  </Col>
+                </Row>
                 <Form.Item
-                  name="name"
-                  rules={[{ required: true, message: 'Vui lòng nhập họ tên!' }]}
+                  name="subject"
+                  rules={[{ required: true, message: 'Vui lòng nhập chủ để!' }]}
                 >
-                  <Input size="large" placeholder="Họ tên" />
+                  <Input size="large" placeholder="Chủ đề" />
                 </Form.Item>
-              </Col>
-              <Col sm={12}>
                 <Form.Item
-                  name="phoneNumber"
+                  name="content"
                   rules={[
-                    { required: true, message: 'Vui lòng nhập số điện thoại!' },
+                    { required: true, message: 'Vui lòng nhập nội dung' },
                   ]}
                 >
-                  <Input size="large" placeholder="Số điện thoại" />
+                  <TextArea rows={5} placeholder="Nội dung" />
                 </Form.Item>
-              </Col>
-              <Col sm={12}>
-                <Form.Item
-                  name="address"
-                  rules={[
-                    { required: true, message: 'Vui lòng nhập địa chỉ!' },
-                  ]}
-                >
-                  <Input size="large" placeholder="Địa chỉ" />
-                </Form.Item>
-              </Col>
-              <Col sm={12}>
-                <Form.Item
-                  name="email"
-                  rules={[{ required: true, message: 'Vui lòng nhập email!' }]}
-                >
-                  <Input size="large" placeholder="Email" />
-                </Form.Item>
-              </Col>
-            </Row>
-            <Form.Item
-              name="subject"
-              rules={[{ required: true, message: 'Vui lòng nhập chủ để!' }]}
-            >
-              <Input size="large" placeholder="Chủ đề" />
-            </Form.Item>
-            <Form.Item
-              name="content"
-              rules={[{ required: true, message: 'Vui lòng nhập nội dung' }]}
-            >
-              <TextArea rows={5} placeholder="Nội dung" />
-            </Form.Item>
-            <Row>
-              <Space>
-                <Button size="large" type="primary" htmlType="submit">
-                  Gửi
-                </Button>
-                <Button size="large" htmlType="button" onClick={onReset}>
-                  Nhập lại
-                </Button>
-              </Space>
-            </Row>
-          </Form>
+                <Row>
+                  <Space>
+                    <Button size="large" type="primary" htmlType="submit">
+                      Gửi
+                    </Button>
+                    <Button size="large" htmlType="button" onClick={onReset}>
+                      Nhập lại
+                    </Button>
+                  </Space>
+                </Row>
+              </Form>
+            </Col>
+          </Row>
         </Col>
       </Row>
       <Row
@@ -142,7 +157,7 @@ export const Contact = () => {
           marginTop: '2rem',
         }}
       >
-        <Col sm={18}>
+        <Col md={23} lg={23} xl={23} xxl={18}>
           <div>
             <iframe
               style={{ border: 0, width: '100%', height: '270px' }}

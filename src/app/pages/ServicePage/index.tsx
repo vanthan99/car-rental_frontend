@@ -55,7 +55,7 @@ export function ServicePage() {
     <ServicePageWrapper>
       <TitleMain name="DỊCH VỤ" />
       <Row justify="center">
-        <Col sm={18}>
+        <Col xl={23} xxl={18}>
           <Row gutter={[16, 16]}>{renderServiceItem}</Row>
         </Col>
       </Row>
