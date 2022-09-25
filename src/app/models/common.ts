@@ -97,6 +97,14 @@ export const SiteMapArray = [
   },
 ];
 
+export const CompanyInfo = {
+  ADDRESS: '30, Tôn Thất Tùng, Phường 5, thành phố Đông Hà, tỉnh Quảng Trị',
+  PHONE_NUMBER: '03 886 85 886',
+  WEBSITE: 'https://thueotoquangtri.com/',
+  DESCRIPTION: 'CHO THUÊ XE Ô TÔ TỰ LÁI QUẢNG TRỊ',
+  FACEBOOK_HOMEPAGE: 'https://www.facebook.com/lr.tuan.5',
+};
+
 // testing
 export const PostList: Array<PostModal> = [
   {

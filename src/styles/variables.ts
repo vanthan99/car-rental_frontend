@@ -24,4 +24,6 @@ export const styleVariables = {
   TEXT_FONT_SIZE_LV3: '13px',
 
   TRANSITION: '0.4s',
+
+  ICON_FONT_SIZE: '20px',
 };

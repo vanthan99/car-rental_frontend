@@ -12,6 +12,7 @@ import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
 import { MobilScreenSize } from 'styles/commons';
 import CSS from 'csstype';
+import { CompanyInfo } from 'app/models';
 const { Paragraph, Text } = Typography;
 export const Footer = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -85,16 +86,12 @@ export const Footer = () => {
     <FooterWrapper>
       <Row justify="center" style={rowStyles}>
         <Col xs={24} sm={10}>
-          <Title>CHO THUÊ XE TỰ LÁI TRÍ TÍN</Title>
+          <Title>{CompanyInfo.DESCRIPTION}</Title>
           <Paragraph>
+            <CompanyInfoItem>-Địa chỉ: {CompanyInfo.ADDRESS}</CompanyInfoItem>
+            <CompanyInfoItem>-SĐT: {CompanyInfo.PHONE_NUMBER}</CompanyInfoItem>
             <CompanyInfoItem>
-              Địa Chỉ: D1-109 Nhà ở an sinh xã hội becamex, Định Hoà, Thủ Dầu
-              Một, Bình Dương
-            </CompanyInfoItem>
-            <CompanyInfoItem>Hotline: 0382936939 - 0902927936</CompanyInfoItem>
-            <CompanyInfoItem>Email:congtri1410@gmail.com</CompanyInfoItem>
-            <CompanyInfoItem>
-              Website: <Link to="/">http://xetulaitritin.com</Link>
+              Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
             </CompanyInfoItem>
           </Paragraph>
         </Col>

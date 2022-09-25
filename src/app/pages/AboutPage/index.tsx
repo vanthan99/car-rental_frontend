@@ -14,8 +14,6 @@ import { Share } from 'app/components/Share';
 import { useMediaQuery } from 'react-responsive';
 import { MobilScreenSize } from 'styles/commons';
 
-interface Props {}
-
 export const AboutPage = () => {
   const isMobileScreen = useMediaQuery(MobilScreenSize);
   const AboutPageWrapper = styled.div`
@@ -24,7 +22,7 @@ export const AboutPage = () => {
   `;
   return (
     <AboutPageWrapper>
-      <TitleMain name="CHO THUÊ XE TỰ LÁI TRÍ TIN BÌNH DƯƠNG" />
+      <TitleMain name="CHO THUÊ XE Ô TÔ TỰ LÁI ĐÔNG HÀ QUẢNG TRỊ" />
       <Row justify="center">
         <Col sm={18}>
           <Content>
@@ -32,49 +30,54 @@ export const AboutPage = () => {
               <h1>
                 <strong>
                   <span style={{ fontSize: '20px' }}>
-                    Giới thiệu dịch vụ cho thuê xe tự lái Trí Tín&nbsp;
+                    Giới thiệu dịch vụ cho thuê xe tự lái
                   </span>
                 </strong>
               </h1>
               <h2>
                 <strong>
                   <span style={{ fontSize: '18px' }}>
-                    Cho thuê xe tự lái bình dương&nbsp;
+                    Cho thuê xe tự lái Đông Hà
+                  </span>
+                </strong>
+              </h2>
+              <h2>
+                <strong>
+                  <span style={{ fontSize: '18px' }}>
+                    Tự hào là đơn vị cung cấp dịch vụ uy tín, chuyên nghiệp
                   </span>
                 </strong>
               </h2>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Dịch vụ cho thuê xe ô tô tự lái trí Tin Bình Dương khu vực Thủ
-                  Dầu Một, Bến Cát, Tân Uyên&nbsp;đặc biệt là cho thuê tự
-                  lái&nbsp;gồm 4 chỗ và 7 chỗ
+                  Dịch vụ cho thuê xe ô tô tự lái Quảng Trị khu vực Đông Hà, Ái
+                  Tử, Thị Xã Quảng Trị, Cửa Việt, Cam Lộ Gio Linh đặc biệt là
+                  cho thuê tự lái gồm 5 chỗ và 7 chỗ
                 </span>
               </p>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Được biết đến là hình thức chỉ thuê xe&nbsp;không cần thuê
-                  người lái, nhằm đảm bảo tính riêng tư và không bị
-                  ràng&nbsp;buộc bởi tài xế, giúp người thuê có những giây phúc
-                  tự do di&nbsp;chuyển cùng gia đình, người thân bạn bè và đối
-                  tác.&nbsp;
+                  Được biết đến là hình thức chỉ thuê xe không cần thuê người
+                  lái, nhằm đảm bảo tính riêng tư và không bị ràng buộc bởi tài
+                  xế, giúp người thuê có những giây phúc tự do di chuyển cùng
+                  gia đình, người thân bạn bè và đối tác.
                 </span>
               </p>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Bạn đang cần dịch vụ&nbsp;thuê xe tự&nbsp;lái&nbsp;để đưa gia
-                  đình, người thân đi du lịch trong
-                  dịp&nbsp;nghỉ&nbsp;lễ&nbsp;dài&nbsp;ngày. bạn có thể chủ động
-                  trong quá trình công tác, cùng đồng nghiệp.&nbsp;
+                  Bạn đang cần dịch vụ thuê xe tự lái Quảng Trị để đưa gia đình,
+                  người thân đi du lịch trong dịp nghỉ lễ dài ngày, Bạn có thể
+                  chủ động trong quá trình công tác, cùng đồng nghiệp.
                 </span>
               </p>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Dịch vụ cho thuê xe ô tô&nbsp;tự lái Trí Tín xẽ mong đáp ứng
-                  được những mong muốn và yêu cầu của bạn giúp bạn có 1 chuyến
-                  đi thật thoải mái và tiết kiệm&nbsp;
+                  Dịch vụ cho thuê xe ô tô tự lái Đông Hà sẽ mong đáp ứng được
+                  những mong muốn và yêu cầu của bạn giúp bạn có 1 chuyến đi
+                  thật thoải mái và tiết kiệm
                 </span>
               </p>
-              <p>
+              {/* <p>
                 <span style={{ fontSize: '16px' }}>&nbsp;</span>
                 <Image
                   alt="Cho thuê xe tự lái Trí Tín "
@@ -126,12 +129,10 @@ export const AboutPage = () => {
                   Tín&nbsp;có chế độ bảo dưỡng nghiêm ngặt. Nên chất lượng đạt
                   chuẩn đầu ra, cung ứng đến khách hàng không bị phàn nàn.
                 </span>
-              </p>
+              </p> */}
               <h2>
                 <strong>
-                  <span style={{ fontSize: '18px' }}>
-                    Địa điểm cho thuê xe tự lái đời mới tại Thủ Dầu Một&nbsp;
-                  </span>
+                  <span style={{ fontSize: '18px' }}></span>
                 </strong>
               </h2>
               <h2>
@@ -139,7 +140,7 @@ export const AboutPage = () => {
                   <strong>
                     <em>
                       <span style={{ fontSize: '18px' }}>
-                        CHO THUÊ XE TỰ LÁI TRÍ TÍN&nbsp;
+                        Địa điểm cho thuê xe tự lái đời mới tại Đông Hà
                       </span>
                     </em>
                   </strong>
@@ -148,15 +149,15 @@ export const AboutPage = () => {
               <p>
                 Địa Chỉ:&nbsp;
                 <a href="https://www.google.com/maps/place/Cho+thu%C3%AA+xe+t%E1%BB%B1+l%C3%A1i+Tr%C3%AD+T%C3%ADn+-+Th%E1%BB%A7+D%E1%BA%A7u+M%E1%BB%99t/@11.050926,106.662304,16z/data=!4m5!3m4!1s0x0:0x4f267fd9bff834f!8m2!3d11.0509257!4d106.6623038?hl=vi">
-                  D1-109 Nhà ở an sinh xã hội becamex, Định Hoà, Thủ Dầu Một,
-                  Bình Dương
+                  30 Tôn Thất Tùng Đông Hà Quảng Trị
                 </a>
               </p>
-              <p>Hotline:&nbsp;0382936939 - 0902927936</p>
-              <p>Email:congtri1410@gmail.com</p>
+              <p>Hotline:&nbsp;03 886 85 886</p>
               <p>
                 Website:&nbsp;
-                <a href="http://xetulaitritin.com/">http://xetulaitritin.com</a>
+                <a href="http://thueotoquangtri.com">
+                  http://thueotoquangtri.com
+                </a>
               </p>
               <p>&nbsp;</p>
               <p>&nbsp;</p>

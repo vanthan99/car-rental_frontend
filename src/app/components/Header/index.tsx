@@ -4,8 +4,10 @@
  *
  */
 import {
+  AimOutlined,
   FacebookOutlined,
   MenuOutlined,
+  PhoneOutlined,
   SearchOutlined,
 } from '@ant-design/icons';
 import { Col, List, Row, Space, Typography } from 'antd';
@@ -19,7 +21,7 @@ import { MobilScreenSize } from 'styles/commons';
 import Roll from 'react-reveal/Roll';
 import Bounce from 'react-reveal/Bounce';
 import { sizes } from 'styles/media';
-import { SiteMap } from 'app/models';
+import { CompanyInfo, SiteMap } from 'app/models';
 const { Text } = Typography;
 const onSearch = (value: string) => console.log(value);
 const TopHeaderWrapper = styled.span``;
@@ -30,6 +32,10 @@ export const Header = () => {
   const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
   const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
   const { ABOUT, ACTIVITY, CONTACT, HOME, SERVICE, TYPE } = SiteMap;
+  const [showHeader, setShowHeader] = React.useState<boolean>(true);
+  const turnOffHeader = () => {
+    setShowHeader(false);
+  };
   return (
     <HeaderWrapper>
       <TopHeaderWrapper hidden={isMediumScreen ? true : false}>
@@ -41,21 +47,34 @@ export const Header = () => {
             height: '3rem',
           }}
         >
-          <Col sm={10}>
-            <Text>
-              D1-109 Nhà ở an sinh xã hội becamex, Định Hoà, Thủ Dầu Một, Bình
-              Dương
-            </Text>
-          </Col>
-          <Col sm={8}>
-            <Row justify="end">
-              <Col>
-                <Space>
-                  <Text>0902 927 936 - 0382 936 939</Text>
-                  <Text>
-                    <FacebookOutlined style={{ fontSize: '20px' }} />
-                  </Text>
-                </Space>
+          <Col sm={18}>
+            <Row justify="space-between">
+              <Col sm={10}>
+                <ComponentAlignCenter>
+                  <AimOutlined
+                    style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
+                  />{' '}
+                  &nbsp;
+                  <span>{CompanyInfo.ADDRESS}</span>
+                </ComponentAlignCenter>
+              </Col>
+              <Col sm={8}>
+                <Row justify="end">
+                  <Col>
+                    <ComponentAlignCenter>
+                      <PhoneOutlined
+                        rotate={90}
+                        style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
+                      />
+                      <b> &nbsp; {CompanyInfo.PHONE_NUMBER} &nbsp;| &nbsp;</b>
+                      {/* <Link style={{color:'black'}} to={CompanyInfo.FACEBOOK_HOMEPAGE}> */}
+                      <FacebookOutlined
+                        style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
+                      />
+                      {/* </Link> */}
+                    </ComponentAlignCenter>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Col>
@@ -215,6 +234,12 @@ const navigationData = [
     path: '/contact',
   },
 ];
+
+const ComponentAlignCenter = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const MobileMenuWrapper = styled.div``;
 
 const MobileSearchWrapper = styled.div`
