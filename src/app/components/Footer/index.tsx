@@ -13,6 +13,7 @@ import { styleVariables } from 'styles';
 import { MobilScreenSize } from 'styles/commons';
 import CSS from 'csstype';
 import { CompanyInfo } from 'app/models';
+import { ComponentAlignCenter } from '../Header';
 const { Paragraph, Text } = Typography;
 export const Footer = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -52,6 +53,7 @@ export const Footer = () => {
   const CompanyInfoItem = styled.p`
     color: ${styleVariables.TEXT_COLOR_WHITE};
     font-size: 14px;
+    margin: 1rem 0;
   `;
 
   const Title = styled.p`
@@ -88,8 +90,8 @@ export const Footer = () => {
         <Col xs={24} sm={10}>
           <Title>{CompanyInfo.DESCRIPTION}</Title>
           <Paragraph>
-            <CompanyInfoItem>-Địa chỉ: {CompanyInfo.ADDRESS}</CompanyInfoItem>
-            <CompanyInfoItem>-SĐT: {CompanyInfo.PHONE_NUMBER}</CompanyInfoItem>
+            <CompanyInfoItem>Địa chỉ: {CompanyInfo.ADDRESS}</CompanyInfoItem>
+            <CompanyInfoItem>SĐT: {CompanyInfo.PHONE_NUMBER}</CompanyInfoItem>
             <CompanyInfoItem>
               Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
             </CompanyInfoItem>
@@ -122,10 +124,7 @@ export const Footer = () => {
         }}
       >
         <Col xs={24} sm={12}>
-          <CompanyInfoItem>
-            © 2022 CHO THUÊ XE TỰ LÁI TRÍ TÍN - KHANG TRẦN THIẾT KẾ WEBSITE
-            070595 3638. Designed by Nina.vn
-          </CompanyInfoItem>
+          <CompanyInfoItem>{CompanyInfo.DESIGN_BY}</CompanyInfoItem>
         </Col>
         <Col xs={24} sm={6}>
           <Row justify="end">

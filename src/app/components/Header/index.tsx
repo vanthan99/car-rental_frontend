@@ -21,7 +21,7 @@ import { MobilScreenSize } from 'styles/commons';
 import Roll from 'react-reveal/Roll';
 import Bounce from 'react-reveal/Bounce';
 import { sizes } from 'styles/media';
-import { CompanyInfo, SiteMap } from 'app/models';
+import { CompanyInfo, SiteMap, SiteMapInNav } from 'app/models';
 const { Text } = Typography;
 const onSearch = (value: string) => console.log(value);
 const TopHeaderWrapper = styled.span``;
@@ -82,10 +82,67 @@ export const Header = () => {
       </TopHeaderWrapper>
       <MenuWrapper>
         <DeskTopMenu hidden={isMediumScreen ? true : false}>
-          <ImageWrapper to="/">
-            <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
-          </ImageWrapper>
-          <div
+          <Row justify="center" align="middle">
+            <Col sm={18}>
+              <Row justify="space-between" align="middle">
+                <Col sm={3}>
+                  <ImageWrapper to="/">
+                    <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
+                  </ImageWrapper>
+                </Col>
+                <Col>
+                  <Row align="middle" justify="end">
+                    <Space>
+                      <_NavLink to={HOME.path}>{HOME.name}</_NavLink>
+                      <_NavLink
+                        activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                        to={ABOUT.path}
+                      >
+                        {ABOUT.name}
+                      </_NavLink>
+                      <_NavLink
+                        activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                        to={SERVICE.path}
+                      >
+                        {SERVICE.name}
+                      </_NavLink>
+
+                      <_NavLink
+                        activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                        to={TYPE.path}
+                      >
+                        {TYPE.name}
+                      </_NavLink>
+
+                      <_NavLink
+                        activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                        to={ACTIVITY.path}
+                      >
+                        {ACTIVITY.name}
+                      </_NavLink>
+                      <_NavLink
+                        activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                        to={CONTACT.path}
+                      >
+                        {CONTACT.name}
+                      </_NavLink>
+                      <SearchWrapper>
+                        <_Input
+                          type="text"
+                          placeholder="Nhập từ khóa cần tìm..."
+                        />
+                        <SearchButton>
+                          <SearchOutlined />
+                        </SearchButton>
+                      </SearchWrapper>
+                    </Space>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+
+          {/* <div
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -165,7 +222,7 @@ export const Header = () => {
                 </Li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </DeskTopMenu>
         <MobileMenu hidden={isMediumScreen ? false : true}>
           <MobileMenuBar>
@@ -190,7 +247,7 @@ export const Header = () => {
                 </Bounce>
               }
               bordered
-              dataSource={navigationData}
+              dataSource={SiteMapInNav}
               renderItem={item => (
                 <Roll left cascade>
                   <List.Item
@@ -208,34 +265,8 @@ export const Header = () => {
     </HeaderWrapper>
   );
 };
-const navigationData = [
-  {
-    name: 'trang chủ',
-    path: '/',
-  },
-  {
-    name: 'Giới thiệu',
-    path: '/about',
-  },
-  {
-    name: 'dịch vụ',
-    path: '/service',
-  },
-  {
-    name: 'loại xe',
-    path: '/type',
-  },
-  {
-    name: 'hoạt động',
-    path: '/activity',
-  },
-  {
-    name: 'liên hệ',
-    path: '/contact',
-  },
-];
 
-const ComponentAlignCenter = styled.div`
+export const ComponentAlignCenter = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -295,40 +326,6 @@ const _Hamburger = styled.div`
   color: black;
   text-decoration: none;
   background-color: transparent;
-
-  // &:before {
-  //   -webkit-transition: none 0.5s ease 0.5s;
-  //   transition: none 0.5s ease 0.5s;
-  //   -webkit-transition-property: transform, top, bottom, left, opacity;
-  //   transition-property: transform, top, bottom, left, opacity;
-
-  //   top: 0px;
-
-  //   background: #000;
-  //   content: '';
-  //   display: block;
-  //   width: 100%;
-  //   height: 2px;
-  //   position: absolute;
-  //   left: 0px;
-  // }
-
-  // &:after {
-  //   -webkit-transition: none 0.5s ease 0.5s;
-  //   transition: none 0.5s ease 0.5s;
-  //   -webkit-transition-property: transform, top, bottom, left, opacity;
-  //   transition-property: transform, top, bottom, left, opacity;
-
-  //   top: 20px;
-
-  //   background: #000;
-  //   content: '';
-  //   display: block;
-  //   width: 100%;
-  //   height: 2px;
-  //   position: absolute;
-  //   left: 0px;
-  // }
 `;
 
 const MobileMenuBar = styled.div`
@@ -395,7 +392,7 @@ const _NavLink = styled(NavLink)`
   display: block;
   position: relative;
   color: #333;
-  padding: 0 20px;
+  padding: 0 15px;
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none !important;
@@ -407,14 +404,8 @@ const _NavLink = styled(NavLink)`
   transition: ${styleVariables.TRANSITION} ease-out;
   outline: none;
   background-color: transparent;
-`;
-const Li = styled.li`
-  position: relative;
-  z-index: 1;
-  display: list-item;
-  text-align: -webkit-match-parent;
 
-  &:hover > a {
+  &:hover {
     color: ${styleVariables.TEXT_COLOR_RED};
   }
 `;
@@ -494,10 +485,10 @@ const MenuWrapper = styled.div`
   padding: 13px 0;
 `;
 const DeskTopMenu = styled.div`
-  max-width: 1200px;
-  margin: auto;
-  width: calc(100% - 20px);
-  align-items: center !important;
-  justify-content: space-between !important;
-  display: flex;
+  // max-width: 1200px;
+  // margin: auto;
+  // width: calc(100% - 20px);
+  // align-items: center !important;
+  // justify-content: space-between !important;
+  // display: flex;
 `;

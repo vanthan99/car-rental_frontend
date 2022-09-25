@@ -15,8 +15,8 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
   const { description, redirectUrl, imageUrl, title, index } = item;
   const isMobileScreen = useMediaQuery(MobilScreenSize);
   return (
-    <Row justify="center" style={{ marginTop: '2rem' }} key={index}>
-      <Col>
+    <Row justify="center" style={{ marginTop: '1rem', marginBottom: '2rem' }}>
+      <Col sm={24}>
         <CarTypeItemWrapper>
           <Row justify="space-between" gutter={[16, 16]}>
             <Col
@@ -30,14 +30,23 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
                 <_Image src={imageUrl} />
               </ImageWrapper>
             </Col>
-            <Col xs={24} sm={13}>
-              <CarTypeItemTitle>
-                <CarTypeItemTitleText to={redirectUrl}>
-                  {title}
-                </CarTypeItemTitleText>
-              </CarTypeItemTitle>
-              <Description>{description}</Description>
-              <RedirectButton to={redirectUrl}>Xem thêm</RedirectButton>
+            <Col
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+              xs={24}
+              sm={13}
+            >
+              <div>
+                <div>
+                  <Link to={redirectUrl}>
+                    <Title>{title}</Title>
+                  </Link>
+                </div>
+                <Description>{description}</Description>
+                <RedirectButton to={redirectUrl}>Xem thêm</RedirectButton>
+              </div>
             </Col>
           </Row>
         </CarTypeItemWrapper>
@@ -45,6 +54,46 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
     </Row>
   );
 };
+
+const Title = styled.h1`
+  position: relative;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  font-family: 'Raleway', sans-serif;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-bottom: 13px;
+  width: fit-content;
+
+  &:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+  }
+
+  &:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+  }
+`;
 
 const RedirectButton = styled(Link)`
   width: 130px;
@@ -80,50 +129,11 @@ const Description = styled.p`
   white-space: normal;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 6;
   margin-top: 0;
   margin-bottom: 1rem;
 `;
-const CarTypeItemTitleText = styled(Link)`
-  color: #fff;
-  width: 256px;
-  height: 49px;
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/title-dichvu-1.png?alt=media&token=4c7916f3-7a72-4802-91a1-69a14483938f);
-  background-repeat: no-repeat;
-  background-position: left center;
-  padding-left: 30px;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  padding-bottom: 9px;
-  position: relative;
-  z-index: 1;
 
-  &:hover {
-    color: #fff;
-  }
-`;
-const CarTypeItemTitle = styled.h3`
-  position: relative;
-  margin-bottom: 1rem;
-
-  font-size: 1.75rem;
-
-  &::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    right: 0;
-    top: 0;
-    left: 150px;
-
-    background-image: url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/bg-title-dichvu%20(
-        1
-      ).png?alt=media&token=78ca7b1a-37a9-42d9-9d18-0c48afb2521b);
-  }
-`;
 const CarTypeItemWrapper = styled.div`
   @media (max-width: 576px) {
     padding: 3px 5px;
@@ -136,7 +146,7 @@ const ImageWrapper = styled(Link)`
   &::after {
     content: '';
   left: 10px;
-  right: -10px;
+  right: -2px;
   bottom: 10px;
   top: -10px;
 

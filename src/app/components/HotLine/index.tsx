@@ -61,7 +61,22 @@ export function HotLine(props: Props) {
     position: relative;
     z-index: 1;
 
-    text-decoration: none!important @-moz-keyframes coccoc-alo-circle-img-anim {
+    text-decoration: none !important;
+    &::before {
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      content: '';
+      width: 40px;
+      height: 40px;
+
+      background: #fff url(http://xetulaitritin.com/assets/images/dt2.png)
+        no-repeat;
+      animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      -webkit-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+      border-radius: 50%;
+    }
+    @-moz-keyframes coccoc-alo-circle-img-anim {
       0% {
         transform: rotate(0) scale(1) skew(1deg);
       }
@@ -107,20 +122,6 @@ export function HotLine(props: Props) {
       40% {
         -o-transform: rotate(25deg) scale(1) skew(1deg);
       }
-    }
-
-    &:before {
-      position: absolute;
-      left: 4px;
-      top: 4px;
-      content: '';
-      width: 40px;
-      height: 40px;
-
-      background: #fff url(http://xetulaitritin.com/assets/images/dt2.png)
-        no-repeat;
-      animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-      border-radius: 50%;
     }
 
     span {

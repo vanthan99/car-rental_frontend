@@ -16,7 +16,7 @@ export interface PostItemModal {
 export interface CarTypeItemModal {
   index?: number;
   title: string;
-  description: string;
+  description: any;
   imageUrl: string;
   redirectUrl: string;
 }
@@ -97,12 +97,42 @@ export const SiteMapArray = [
   },
 ];
 
+export const SiteMapInNav = [
+  {
+    path: '/',
+    name: 'Trang Chủ',
+  },
+
+  {
+    path: '/about',
+    name: 'Giới Thiệu',
+  },
+  {
+    path: '/service',
+    name: 'Dịch Vụ',
+  },
+  {
+    path: '/type',
+    name: 'Loại Xe',
+  },
+  {
+    path: '/activity',
+    name: 'Hoạt Động',
+  },
+  {
+    path: '/contact',
+    name: 'Liên Hệ',
+  },
+];
+
 export const CompanyInfo = {
   ADDRESS: '30, Tôn Thất Tùng, Phường 5, thành phố Đông Hà, tỉnh Quảng Trị',
   PHONE_NUMBER: '03 886 85 886',
   WEBSITE: 'https://thueotoquangtri.com/',
   DESCRIPTION: 'CHO THUÊ XE Ô TÔ TỰ LÁI QUẢNG TRỊ',
   FACEBOOK_HOMEPAGE: 'https://www.facebook.com/lr.tuan.5',
+  DESIGN_BY:
+    '© 2022 CHO THUÊ XE Ô TÔ TỰ LÁI QUẢNG TRỊ - PHONG LÊ THIẾT KẾ WEBSITE 03 886 85 886. Designed by thueotoquangtri.com',
 };
 
 // testing

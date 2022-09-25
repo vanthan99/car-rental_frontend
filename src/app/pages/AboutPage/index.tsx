@@ -13,6 +13,8 @@ import { Col, Image, Row } from 'antd';
 import { Share } from 'app/components/Share';
 import { useMediaQuery } from 'react-responsive';
 import { MobilScreenSize } from 'styles/commons';
+import { CompanyInfo } from 'app/models';
+import { Link } from 'react-router-dom';
 
 export const AboutPage = () => {
   const isMobileScreen = useMediaQuery(MobilScreenSize);
@@ -51,30 +53,55 @@ export const AboutPage = () => {
               <p>
                 <span style={{ fontSize: '16px' }}>
                   Dịch vụ cho thuê xe ô tô tự lái Quảng Trị khu vực Đông Hà, Ái
-                  Tử, Thị Xã Quảng Trị, Cửa Việt, Cam Lộ Gio Linh đặc biệt là
-                  cho thuê tự lái gồm 5 chỗ và 7 chỗ
+                  Tử, Thị Xã Quảng Trị, Cửa Việt, Cam Lộ Gio Linh, đặc biệt là
+                  cho thuê tự lái: gồm 5 chỗ và 7 chỗ
                 </span>
               </p>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Được biết đến là hình thức chỉ thuê xe không cần thuê người
-                  lái, nhằm đảm bảo tính riêng tư và không bị ràng buộc bởi tài
-                  xế, giúp người thuê có những giây phúc tự do di chuyển cùng
+                  Được biết đến là hình thức chỉ thuê xe không cần thuê người
+                  lái, nhằm đảm bảo tính riêng tư và không bị ràng buộc bởi tài
+                  xế, giúp người thuê có những giây phúc tự do di chuyển cùng
                   gia đình, người thân bạn bè và đối tác.
                 </span>
               </p>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Bạn đang cần dịch vụ thuê xe tự lái Quảng Trị để đưa gia đình,
-                  người thân đi du lịch trong dịp nghỉ lễ dài ngày, Bạn có thể
+                  Bạn đang cần dịch vụ thuê xe tự lái Quảng Trị để đưa gia đình,
+                  người thân đi du lịch trong dịp nghỉ lễ dài ngày, Bạn có thể
                   chủ động trong quá trình công tác, cùng đồng nghiệp.
                 </span>
               </p>
               <p>
                 <span style={{ fontSize: '16px' }}>
-                  Dịch vụ cho thuê xe ô tô tự lái Đông Hà sẽ mong đáp ứng được
+                  Dịch vụ cho thuê xe ô tô tự lái Đông Hà sẽ mong đáp ứng được
                   những mong muốn và yêu cầu của bạn giúp bạn có 1 chuyến đi
                   thật thoải mái và tiết kiệm
+                </span>
+              </p>
+
+              <p>
+                <strong>
+                  <span style={{ fontSize: '18px' }}>
+                    CHO THUÊ XE TỰ LÁI QUẢNG TRỊ
+                  </span>
+                </strong>
+                <span style={{ fontSize: '16px' }}>
+                  &nbsp; là cái tên được nhiều lượt truy cập nhất, cũng là cái
+                  tên hot nhất trong ngành{' '}
+                  <strong>cho thuê xe tự lái ở Đông Hà Quảng Trị</strong>. Sự uy
+                  tín minh bạch được  nhiều du khách đón nhận và đồng tình. Là
+                  nơi đáng để thuê xe khi cần xe ô tô đi lại.
+                </span>
+              </p>
+
+              <p>
+                <span style={{ fontSize: '16px' }}>
+                  Các lĩnh vực chúng tôi cung cấp, cho thuê xe du lịch và thuê
+                  xe ô tô tự lái. Các mẫu xe đời mới từ 2020 đến nay. Là đơn vị
+                  chuyên cho thuê ô tô tự lái các dòng xe ở Quảng Trị có chế độ
+                  bảo dưỡng nghiêm ngặt. Nên chất lượng đạt chuẩn đầu ra, cung
+                  ứng đến khách hàng không bị phàn nàn.
                 </span>
               </p>
               {/* <p>
@@ -149,18 +176,14 @@ export const AboutPage = () => {
               <p>
                 Địa Chỉ:&nbsp;
                 <a href="https://www.google.com/maps/place/Cho+thu%C3%AA+xe+t%E1%BB%B1+l%C3%A1i+Tr%C3%AD+T%C3%ADn+-+Th%E1%BB%A7+D%E1%BA%A7u+M%E1%BB%99t/@11.050926,106.662304,16z/data=!4m5!3m4!1s0x0:0x4f267fd9bff834f!8m2!3d11.0509257!4d106.6623038?hl=vi">
-                  30 Tôn Thất Tùng Đông Hà Quảng Trị
+                  {CompanyInfo.ADDRESS}
                 </a>
               </p>
-              <p>Hotline:&nbsp;03 886 85 886</p>
+              <p>Hotline:&nbsp;{CompanyInfo.PHONE_NUMBER}</p>
               <p>
                 Website:&nbsp;
-                <a href="http://thueotoquangtri.com">
-                  http://thueotoquangtri.com
-                </a>
+                <Link to={CompanyInfo.WEBSITE}>{CompanyInfo.WEBSITE}</Link>
               </p>
-              <p>&nbsp;</p>
-              <p>&nbsp;</p>
             </div>
           </Content>
         </Col>

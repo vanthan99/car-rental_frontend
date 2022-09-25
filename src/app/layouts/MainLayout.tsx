@@ -11,12 +11,7 @@ export function MainLayout({ children }) {
   return (
     <MainLayoutWrapper>
       <Header />
-      {/* <SideBar /> */}
-      <Row justify="center" style={{ height: '2rem' }}>
-        <Col sm={18}>
-          <__Breadcrumb />
-        </Col>
-      </Row>
+      <__Breadcrumb />
       <MainWrapper>{children}</MainWrapper>
       <Footer />
       <HotLine />
