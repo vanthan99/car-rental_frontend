@@ -73,12 +73,12 @@ export function CarTypePage() {
   return (
     <CarTypeWrapper>
       <Row justify="center">
-        <Col xl={23} xxl={18}>
+        <Col xs={23} xl={23} xxl={18}>
           <TitleMain name="LOẠI XE" />
         </Col>
       </Row>
       <Row justify="center">
-        <Col xl={23} xxl={18}>
+        <Col xs={23} xl={23} xxl={18}>
           {renderCarTypeList}
         </Col>
       </Row>

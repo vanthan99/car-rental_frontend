@@ -70,7 +70,7 @@ export const Contact = () => {
                 Website: <Link to="/">{CompanyInfo.WEBSITE}</Link>
               </CompanyInfoItem>
             </Col>
-            <Col lg={24} xl={10}>
+            <Col sm={24} md={24} lg={24} xl={10}>
               <Form
                 // {...layout}
                 form={form}
@@ -78,7 +78,7 @@ export const Contact = () => {
                 onFinish={onFinish}
               >
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                  <Col sm={12}>
+                  <Col xs={24} sm={12}>
                     <Form.Item
                       name="name"
                       rules={[
@@ -88,7 +88,7 @@ export const Contact = () => {
                       <Input size="large" placeholder="Họ tên" />
                     </Form.Item>
                   </Col>
-                  <Col sm={12}>
+                  <Col xs={24} sm={12}>
                     <Form.Item
                       name="phoneNumber"
                       rules={[
@@ -101,7 +101,7 @@ export const Contact = () => {
                       <Input size="large" placeholder="Số điện thoại" />
                     </Form.Item>
                   </Col>
-                  <Col sm={12}>
+                  <Col xs={24} sm={12}>
                     <Form.Item
                       name="address"
                       rules={[
@@ -111,7 +111,7 @@ export const Contact = () => {
                       <Input size="large" placeholder="Địa chỉ" />
                     </Form.Item>
                   </Col>
-                  <Col sm={12}>
+                  <Col xs={24} sm={12}>
                     <Form.Item
                       name="email"
                       rules={[
@@ -157,7 +157,7 @@ export const Contact = () => {
           marginTop: '2rem',
         }}
       >
-        <Col md={23} lg={23} xl={23} xxl={18}>
+        <Col xs={23} md={23} lg={23} xl={23} xxl={18}>
           <div>
             <iframe
               style={{ border: 0, width: '100%', height: '270px' }}

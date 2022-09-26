@@ -103,7 +103,7 @@ export const Footer = () => {
                 </CompanyInfoItem>
               </Paragraph>
             </Col>
-            <Col md={24} lg={24} xl={12}>
+            <Col xs={23} md={24} lg={24} xl={12}>
               <ServiceTitle>DỊCH VỤ</ServiceTitle>
               <Ul>
                 <Li>

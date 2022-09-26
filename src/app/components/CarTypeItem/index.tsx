@@ -16,10 +16,11 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
   const isMobileScreen = useMediaQuery(MobilScreenSize);
   return (
     <Row justify="center" style={{ marginTop: '1rem', marginBottom: '2rem' }}>
-      <Col sm={24}>
+      <Col md={24} sm={24}>
         <CarTypeItemWrapper>
           <Row justify="space-between" gutter={[16, 16]}>
             <Col
+              md={24}
               xs={24}
               sm={10}
               order={
@@ -37,6 +38,7 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
               }}
               xs={24}
               sm={13}
+              md={24}
             >
               <div>
                 <div>
@@ -69,7 +71,6 @@ const Title = styled.h1`
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  white-space: nowrap;
   padding-bottom: 13px;
   width: fit-content;
 

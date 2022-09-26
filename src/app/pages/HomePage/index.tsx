@@ -153,7 +153,7 @@ export function HomePage() {
 
       <CarTypeWrapper>
         <Row justify="center">
-          <Col xl={23} xxl={18}>
+          <Col lg={23} xl={23} xxl={18}>
             <Row justify="center">
               <Fade bottom>
                 <Col>
@@ -165,14 +165,18 @@ export function HomePage() {
                 </Col>
               </Fade>
             </Row>
-            <Row>{renderCarTypeList}</Row>
+            <Row justify="center">
+              <Col xs={23} md={23} xl={24}>
+                {renderCarTypeList}
+              </Col>
+            </Row>
           </Col>
         </Row>
       </CarTypeWrapper>
 
       <ProcedureWrapper>
         <Row justify="center">
-          <Col xl={23} xxl={18}>
+          <Col xs={23} md={23} lg={23} xl={23} xxl={18}>
             <Row justify="center">
               <Fade bottom>
                 <Col>
@@ -194,7 +198,7 @@ export function HomePage() {
 
       <ServiceWrapper>
         <Row justify="center">
-          <Col xl={23} xxl={18}>
+          <Col xs={23} md={23} xl={23} xxl={18}>
             <Row justify="center">
               <Fade bottom>
                 <Col>
@@ -208,7 +212,7 @@ export function HomePage() {
               </Fade>
             </Row>
             <Row justify="center">
-              <Col xl={23} xxl={18}>
+              <Col lg={23} xl={23} xxl={18}>
                 <Row gutter={[16, 16]}>{renderServiceItem}</Row>
               </Col>
             </Row>
