@@ -5,6 +5,7 @@
  */
 import {
   AimOutlined,
+  CloseOutlined,
   FacebookOutlined,
   MenuOutlined,
   PhoneOutlined,
@@ -32,6 +33,7 @@ export const Header = () => {
   const isTabletScreen = useMediaQuery({ maxWidth: sizes.tablet });
   const [isShowMobileMenu, setShowMobileMenu] = React.useState(false);
   const toggleMobileMenu = () => setShowMobileMenu(!isShowMobileMenu);
+  const turnOffMobileMenu = () => setShowMobileMenu(false);
   const { ABOUT, ACTIVITY, CONTACT, HOME, SERVICE, TYPE } = SiteMap;
   const [showHeader, setShowHeader] = React.useState<boolean>(true);
   const turnOffHeader = () => {
@@ -144,17 +146,31 @@ export const Header = () => {
           </Row>
         </DeskTopMenu>
         <MobileMenu hidden={isMediumScreen ? false : true}>
-          <MobileMenuBar>
-            <_Hamburger onClick={toggleMobileMenu}>
-              <MenuOutlined />
-            </_Hamburger>
-            <MobileLogo to="/">
-              <MobileLogoImage src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
-            </MobileLogo>
-            <MobileSearchWrapper>
-              <SearchOutlined style={{ fontSize: '17px' }} />
-            </MobileSearchWrapper>
-          </MobileMenuBar>
+          <Row justify="center">
+            <Col xs={23} md={23} lg={23}>
+              <MobileMenuBar>
+                <_Hamburger onClick={toggleMobileMenu}>
+                  {isShowMobileMenu ? (
+                    <CloseOutlined
+                      style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
+                    />
+                  ) : (
+                    <MenuOutlined
+                      style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
+                    />
+                  )}
+                </_Hamburger>
+                <MobileLogo to="/">
+                  <MobileLogoImage src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
+                </MobileLogo>
+                <MobileSearchWrapper>
+                  <SearchOutlined
+                    style={{ fontSize: styleVariables.ICON_FONT_SIZE }}
+                  />
+                </MobileSearchWrapper>
+              </MobileMenuBar>
+            </Col>
+          </Row>
         </MobileMenu>
         {isShowMobileMenu && (
           <MobileMenuWrapper id="mobile_header_menu">
@@ -248,7 +264,6 @@ const _Hamburger = styled.div`
 `;
 
 const MobileMenuBar = styled.div`
-  padding: 0px 10px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;

@@ -19,14 +19,14 @@ import { Link } from 'react-router-dom';
 export const AboutPage = () => {
   const isMobileScreen = useMediaQuery(MobilScreenSize);
   const AboutPageWrapper = styled.div`
-    background-color: ${styleVariables.BACKGROUND_COLOR};
+    background-color: ${styleVariables.BACKGROUND_COLOR3};
     padding: ${isMobileScreen ? '2rem 10px' : '2rem 0'};
   `;
   return (
     <AboutPageWrapper>
       <TitleMain name="CHO THUÊ XE Ô TÔ TỰ LÁI ĐÔNG HÀ QUẢNG TRỊ" />
       <Row justify="center">
-        <Col xxl={18} xl={23}>
+        <Col xxl={18} xl={23} lg={23}>
           <Content>
             <div className="content-main w-clear">
               <h1>

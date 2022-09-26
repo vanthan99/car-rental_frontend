@@ -62,7 +62,7 @@ export const ActivityPage = () => {
   const isMobileScreen = useMediaQuery(MobilScreenSize);
 
   const ActivityPageWrapper = styled.div`
-    background-color: ${styleVariables.BACKGROUND_COLOR};
+    background-color: ${styleVariables.BACKGROUND_COLOR3};
     padding: ${isMobileScreen ? '2rem 10px' : '2rem 0'};
   `;
   return (

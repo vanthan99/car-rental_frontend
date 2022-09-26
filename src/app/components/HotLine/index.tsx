@@ -49,7 +49,7 @@ export function HotLine(props: Props) {
 
   const _A = styled.a`
     display: block;
-    width: 208px;
+    width: 167px;
     padding: 6px 0 6px 55px;
     border-radius: 24px;
     height: 48px;
@@ -123,7 +123,9 @@ export function HotLine(props: Props) {
         -o-transform: rotate(25deg) scale(1) skew(1deg);
       }
     }
-
+    &:hover {
+      color: white;
+    }
     span {
       display: block;
       color: #ffd500;

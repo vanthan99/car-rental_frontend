@@ -1,7 +1,8 @@
 export const styleVariables = {
-  BACKGROUND_COLOR: '#fbbc05',
-  BACKGROUND_COLOR2: '#fff',
-  BACKGROUND_COLOR3: 'rgba(255, 255, 255, .1)',
+  BACKGROUND_COLOR: '#5CDB95',
+  BACKGROUND_COLOR2: '#8EE4AF',
+  BACKGROUND_COLOR3: '#EDF5E1',
+  BACKGROUND_COLOR4: '#379683',
   BACKGROUND_COLOR_CREAM: '#f2eee5',
 
   BACKGROUND_IMAGE_FOOTER:
@@ -27,3 +28,4 @@ export const styleVariables = {
 
   ICON_FONT_SIZE: '20px',
 };
+// #25D366

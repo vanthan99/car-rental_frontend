@@ -20,7 +20,7 @@ export const ContactPage = () => {
   const { t, i18n } = useTranslation();
   const isMobileScreen = useMediaQuery(MobilScreenSize);
   const ContactPageWrapper = styled.div`
-    background-color: ${styleVariables.BACKGROUND_COLOR};
+    background-color: ${styleVariables.BACKGROUND_COLOR3};
     padding: ${isMobileScreen ? '2rem 10px' : '2rem 0'};
   `;
   return (

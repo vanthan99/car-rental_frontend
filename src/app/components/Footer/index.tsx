@@ -89,7 +89,7 @@ export const Footer = () => {
       <Row justify="center" style={rowStyles}>
         <Col md={23} lg={23} xl={23} xxl={18}>
           <Row justify="space-between">
-            <Col md={24} lg={24} xl={12}>
+            <Col md={24} lg={12} xl={12}>
               <Title>{CompanyInfo.DESCRIPTION}</Title>
               <Paragraph>
                 <CompanyInfoItem>
@@ -103,7 +103,7 @@ export const Footer = () => {
                 </CompanyInfoItem>
               </Paragraph>
             </Col>
-            <Col xs={23} md={24} lg={24} xl={12}>
+            <Col xs={23} md={24} lg={10} xl={12}>
               <ServiceTitle>DỊCH VỤ</ServiceTitle>
               <Ul>
                 <Li>
@@ -127,7 +127,7 @@ export const Footer = () => {
         style={rowStyles}
         justify="center"
         css={{
-          backgroundColor: styleVariables.BACKGROUND_COLOR3,
+          backgroundColor: styleVariables.BACKGROUND_COLOR4,
           padding: '1rem 0',
         }}
       >

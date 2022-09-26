@@ -131,8 +131,7 @@ export const CompanyInfo = {
   WEBSITE: 'https://thueotoquangtri.com/',
   DESCRIPTION: 'CHO THUÊ XE Ô TÔ TỰ LÁI QUẢNG TRỊ',
   FACEBOOK_HOMEPAGE: 'https://www.facebook.com/lr.tuan.5',
-  DESIGN_BY:
-    '© 2022 CHO THUÊ XE Ô TÔ TỰ LÁI QUẢNG TRỊ - PHONG LÊ THIẾT KẾ WEBSITE 03 886 85 886. Designed by thueotoquangtri.com',
+  DESIGN_BY: '© 2022 Designed by thueotoquangtri.com',
 };
 
 // testing

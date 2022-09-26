@@ -11,9 +11,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
 import { MobilScreenSize } from 'styles/commons';
+import { sizes } from 'styles/media';
 export const CarTypeItem = (item: CarTypeItemModal) => {
   const { description, redirectUrl, imageUrl, title, index } = item;
-  const isMobileScreen = useMediaQuery(MobilScreenSize);
+  const isTableScreen = useMediaQuery({ maxWidth: sizes.tablet });
   return (
     <Row justify="center" style={{ marginTop: '1rem', marginBottom: '2rem' }}>
       <Col md={24} sm={24}>
@@ -25,7 +26,7 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
               sm={10}
               xl={12}
               order={
-                !isMobileScreen && index != undefined && index % 2 === 0 ? 0 : 1
+                !isTableScreen && index != undefined && index % 2 === 0 ? 0 : 1
               }
             >
               <ImageWrapper to={redirectUrl}>
