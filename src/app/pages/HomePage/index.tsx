@@ -22,16 +22,47 @@ import { SlideShow } from 'app/components/SlideShow/Loadable';
 const carTypeList: Array<CarTypeItemModal> = [
   {
     title: 'Cho Thuê Xe Tự Lái 5 Chỗ VINFAT',
-    description:
-      'Xe 5 chổ tiêu biểu : Xe cho thuê Đông Hà Fadil Vinfat đời mới 2021 màu đỏ \n - Các tiện ích được trang bị đầy đủ: camera hành trình có cảnh báo tốc độ, định vị google maps, nghe nhạc online .v.v... \n  - Gọi để báo giá: hotline 03 886 85 886 \n Ngoài ra chúng tôi còn các dòng xe khác xin liên hệ để biết thêm chi tiết',
+    description: (
+      <>
+        <span>
+          Xe 5 chổ tiêu biểu : Xe cho thuê Đông Hà Fadil Vinfat đời mới 2021 màu
+          đỏ
+        </span>
+        <br />
+        <span>
+          - Các tiện ích được trang bị đầy đủ: camera hành trình có cảnh báo tốc
+          độ, định vị google maps, nghe nhạc online .v.v...{' '}
+        </span>
+        <br />
+        <span>- Gọi để báo giá: hotline 03 886 85 886</span>
+        <br />
+        <span>
+          - Ngoài ra chúng tôi còn các dòng xe khác xin liên hệ để biết thêm chi
+          tiết
+        </span>
+      </>
+    ),
     redirectUrl: '/1',
     imageUrl:
       'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z34053520846735a84ce25fc2f04b806661f708e35f638-9758.jpg?alt=media&token=34f8afff-8caa-4d1b-a25b-0e7911387fe2',
   },
   {
     title: 'Cho Thuê Xe Tự Lái 5 Chỗ MITSUBISHI',
-    description:
-      'Xe 5 chổ tiêu biểu : Xe xe cho thuê Đông Hà Quảng Trị Mitsubishi Attrage đời mới 2020 màu xanh rêu - Các tiện ích được trang bị đầy đủ: camera hành trình có cảnh báo tốc độ, định vị google maps, nghe nhạc online .v.v... - Gọi để báo giá: hotline 03 886 85 886 Ngoài ra chúng tôi còn các dòng xe khác xin liên hệ để biết thêm chi tiết',
+    description: (
+      <>
+        <span>
+          Xe 5 chổ tiêu biểu : Xe xe cho thuê Đông Hà Quảng Trị Mitsubishi
+          Attrage đời mới 2020 màu xanh rêu
+        </span>
+        <br />
+        <span>
+          - Các tiện ích được trang bị đầy đủ: camera hành trình có cảnh báo tốc
+          độ, định vị google maps, nghe nhạc online .v.v...{' '}
+        </span>
+        <br />
+        <span>- Gọi để báo giá: hotline 03 886 85 886</span>
+      </>
+    ),
     redirectUrl: '/2',
     imageUrl:
       'https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/z3405348776361_a39a0c86edd68c90b56a33199fbdd88b.jpg?alt=media&token=b7068a78-d3c6-4ca4-aea6-6e69cd700a49',
@@ -212,7 +243,7 @@ export function HomePage() {
               </Fade>
             </Row>
             <Row justify="center">
-              <Col lg={23} xl={23} xxl={18}>
+              <Col>
                 <Row gutter={[16, 16]}>{renderServiceItem}</Row>
               </Col>
             </Row>

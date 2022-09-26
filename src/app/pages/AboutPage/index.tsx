@@ -189,7 +189,7 @@ export const AboutPage = () => {
         </Col>
       </Row>
       <Row justify="center">
-        <Col sm={18}>
+        <Col xs={23} xxl={18}>
           <Share />
         </Col>
       </Row>

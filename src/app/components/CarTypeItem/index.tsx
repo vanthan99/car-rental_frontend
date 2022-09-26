@@ -23,6 +23,7 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
               md={24}
               xs={24}
               sm={10}
+              xl={12}
               order={
                 !isMobileScreen && index != undefined && index % 2 === 0 ? 0 : 1
               }
@@ -39,6 +40,7 @@ export const CarTypeItem = (item: CarTypeItemModal) => {
               xs={24}
               sm={13}
               md={24}
+              xl={11}
             >
               <div>
                 <div>
