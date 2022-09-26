@@ -157,7 +157,7 @@ export const Contact = () => {
           marginTop: '2rem',
         }}
       >
-        <Col xs={23} md={23} lg={23} xl={23} xxl={18}>
+        <Col xs={24} md={24} lg={24} xl={23} xxl={23}>
           <div>
             <iframe
               style={{ border: 0, width: '100%', height: '270px' }}

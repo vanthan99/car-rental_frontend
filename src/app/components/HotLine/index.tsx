@@ -62,7 +62,7 @@ export function HotLine(props: Props) {
     z-index: 1;
 
     text-decoration: none !important;
-    &::before {
+    &:before {
       position: absolute;
       left: 4px;
       top: 4px;
@@ -73,56 +73,25 @@ export function HotLine(props: Props) {
       background: #fff url(http://xetulaitritin.com/assets/images/dt2.png)
         no-repeat;
       animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
-      -webkit-animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
       border-radius: 50%;
     }
-    @-moz-keyframes coccoc-alo-circle-img-anim {
-      0% {
+
+    @keyframes coccoc-alo-circle-img-anim {
+      0%,
+      100%,
+      50% {
         transform: rotate(0) scale(1) skew(1deg);
       }
       10%,
       30% {
-        -moz-transform: rotate(-25deg) scale(1) skew(1deg);
+        transform: rotate(-25deg) scale(1) skew(1deg);
       }
       20%,
       40% {
-        -moz-transform: rotate(25deg) scale(1) skew(1deg);
-      }
-      100%,
-      50% {
-        -moz-transform: rotate(0) scale(1) skew(1deg);
+        transform: rotate(25deg) scale(1) skew(1deg);
       }
     }
-    @-webkit-keyframes coccoc-alo-circle-img-anim {
-      0%,
-      100%,
-      50% {
-        -webkit-transform: rotate(0) scale(1) skew(1deg);
-      }
-      10%,
-      30% {
-        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
-      }
-      20%,
-      40% {
-        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
-      }
-    }
-    @-o-keyframes coccoc-alo-circle-img-anim {
-      0%,
-      100%,
-      50% {
-        -o-transform: rotate(0) scale(1) skew(1deg);
-      }
-      10%,
-      30% {
-        -o-transform: rotate(-25deg) scale(1) skew(1deg);
-      }
-      20%,
-      40% {
-        -o-transform: rotate(25deg) scale(1) skew(1deg);
-      }
-    }
+
     &:hover {
       color: white;
     }
