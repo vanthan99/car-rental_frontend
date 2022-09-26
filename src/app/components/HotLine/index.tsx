@@ -70,7 +70,8 @@ export function HotLine(props: Props) {
       width: 40px;
       height: 40px;
 
-      background: #fff url(http://xetulaitritin.com/assets/images/dt2.png)
+      background: #fff
+        url(https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/3DEB284A-EBE7-46A5-ACA4-6ECF1C00C435.jpeg?alt=media&token=440f1dce-c1a6-4f5f-9349-b6e746692d1c)
         no-repeat;
       animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
       border-radius: 50%;
