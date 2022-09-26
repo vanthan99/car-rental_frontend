@@ -5,11 +5,13 @@ import React from 'react';
 import styled from 'styled-components';
 import __Breadcrumb from 'app/components/Breadcrumb';
 import { Col, Row } from 'antd';
+import { HotLine } from 'app/components/HotLine';
 export function HomeLayout({ children }) {
   return (
     <>
       <Header />
       <MainWrapper>{children}</MainWrapper>
+      <HotLine />
       <Footer />
     </>
   );
