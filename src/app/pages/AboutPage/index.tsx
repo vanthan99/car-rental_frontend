@@ -13,8 +13,9 @@ import { Col, Image, Row } from 'antd';
 import { Share } from 'app/components/Share';
 import { useMediaQuery } from 'react-responsive';
 import { MobilScreenSize } from 'styles/commons';
-import { CompanyInfo } from 'app/models';
+import { CompanyInfo, SiteMap } from 'app/models';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export const AboutPage = () => {
   const isMobileScreen = useMediaQuery(MobilScreenSize);
@@ -24,6 +25,9 @@ export const AboutPage = () => {
   `;
   return (
     <AboutPageWrapper>
+      <Helmet>
+        <title>{SiteMap.ABOUT.name}</title>
+      </Helmet>
       <TitleMain name="CHO THUÊ XE Ô TÔ TỰ LÁI ĐÔNG HÀ QUẢNG TRỊ" />
       <Row justify="center">
         <Col xxl={18} xl={23} lg={23}>

@@ -107,3 +107,8 @@ export const ServiceListData: Array<ServiceItemModal> = [
     redirectUrl: '/10',
   },
 ];
+
+export const HelmetData = {
+  defaultTitle: 'Cho thuê xe ô tô Đông Hà - Quảng Trị',
+  titleTemplate: '%s - Cho thuê xe ô tô Đông Hà - Quảng Trị',
+};

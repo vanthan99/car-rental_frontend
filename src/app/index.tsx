@@ -29,18 +29,26 @@ import { BackTop } from 'antd';
 import { Article } from './components/Article/Loadable';
 import { ArticlePage } from './pages/ArticlePage/Loadable';
 import { SiteMap } from './models';
+import { HelmetData } from './DataInitial';
+import { useMediaQuery } from 'react-responsive';
+import { sizes } from 'styles/media';
 
 export function App() {
   const { i18n } = useTranslation();
   const { ABOUT, ACTIVITY, CONTACT, HOME, SERVICE, TYPE } = SiteMap;
+  const isTableScreen = useMediaQuery({ maxWidth: sizes.tablet });
   return (
     <BrowserRouter>
       <Helmet
-        titleTemplate="%s - Thân Test"
-        defaultTitle="React Boilerplate"
+        titleTemplate={HelmetData.titleTemplate}
+        defaultTitle={HelmetData.defaultTitle}
         htmlAttributes={{ lang: i18n.language }}
       >
         <meta name="description" content="A React Boilerplate application" />
+        <link
+          rel="icon"
+          href="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/0890813F-1689-49ED-99D8-F8D46856F80F.jpeg?alt=media&token=aaad168c-4efd-482b-a6e5-3b1e152fc5cb"
+        />
       </Helmet>
       <Switch>
         <Route exact path={['/admin*']}>
@@ -77,7 +85,7 @@ export function App() {
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
-      <BackTop />
+      {!isTableScreen && <BackTop />}
     </BrowserRouter>
   );
 }

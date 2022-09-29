@@ -10,10 +10,11 @@ import { messages } from './messages';
 import { styleVariables } from 'styles';
 import { TitleMain } from 'app/components/TitleMain';
 import { Col, Row, Space } from 'antd';
-import { PostItemModal } from 'app/models';
+import { PostItemModal, SiteMap } from 'app/models';
 import { PostItem } from 'app/components/PostItem';
 import { MobilScreenSize } from 'styles/commons';
 import { useMediaQuery } from 'react-responsive';
+import { Helmet } from 'react-helmet-async';
 
 const PostItems: Array<PostItemModal> = [
   {
@@ -67,6 +68,9 @@ export const ActivityPage = () => {
   `;
   return (
     <ActivityPageWrapper>
+      <Helmet>
+        <title>{SiteMap.ACTIVITY.name}</title>
+      </Helmet>
       <TitleMain name="HOẠT ĐỘNG" />
       <Row justify="center" gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
         {renderPostItem}

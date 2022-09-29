@@ -12,6 +12,8 @@ import { GoogleMapExtenstion } from 'app/components/GoogleMapExtenstion/Loadable
 import { styleVariables } from 'styles';
 import { useMediaQuery } from 'react-responsive';
 import { MobilScreenSize } from 'styles/commons';
+import { Helmet } from 'react-helmet-async';
+import { SiteMap } from 'app/models';
 
 interface Props {}
 
@@ -25,6 +27,9 @@ export const ContactPage = () => {
   `;
   return (
     <ContactPageWrapper>
+      <Helmet>
+        <title>{SiteMap.CONTACT.name}</title>
+      </Helmet>
       {t('')}
       {/*  {t(...messages.someThing())}  */}
       <Contact />

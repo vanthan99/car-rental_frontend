@@ -7,7 +7,9 @@ import { Col, Row } from 'antd';
 import { CarTypeItem } from 'app/components/CarTypeItem';
 import { TitleMain } from 'app/components/TitleMain';
 import { CarTypeListData } from 'app/DataInitial';
+import { SiteMap } from 'app/models';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
 
@@ -17,6 +19,9 @@ export function CarTypePage() {
   ));
   return (
     <CarTypeWrapper>
+      <Helmet>
+        <title>{SiteMap.TYPE.name}</title>
+      </Helmet>
       <Row justify="center">
         <Col xs={23} xl={23} xxl={18}>
           <TitleMain name="LOẠI XE" />

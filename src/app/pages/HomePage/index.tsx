@@ -9,6 +9,7 @@ import {
   ProcedureListData,
   ServiceListData,
 } from 'app/DataInitial';
+import { SiteMap } from 'app/models';
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useMediaQuery } from 'react-responsive';
@@ -54,8 +55,7 @@ export function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
-        <meta name="description" content="A Boilerplate application homepage" />
+        <title>{SiteMap.HOME.name}</title>
       </Helmet>
       <Row justify="center">
         <Col xl={24}>
