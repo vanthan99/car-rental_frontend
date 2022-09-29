@@ -10,8 +10,25 @@ import {
   YahooOutlined,
 } from '@ant-design/icons';
 import { Col, Row, Space } from 'antd';
+import { CompanyInfo } from 'app/models';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  EmailShareButton,
+  TelegramShareButton,
+  TelegramIcon,
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+  EmailIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  ViberShareButton,
+  ViberIcon,
+} from 'react-share';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
 
@@ -24,24 +41,42 @@ export function Share(props: Props) {
       <SocialWrapper>
         <Space>
           <ItemWrapper>
-            <Link to="/">
-              <TwitterOutlined style={{ fontSize: '20px', color: '#08c' }} />
-            </Link>
+            <FacebookShareButton url={CompanyInfo.FACEBOOK_HOMEPAGE}>
+              <FacebookIcon size={32} round={true} />
+            </FacebookShareButton>
           </ItemWrapper>
           <ItemWrapper>
-            <Link to="/">
-              <LinkedinOutlined style={{ fontSize: '20px', color: '#08c' }} />
-            </Link>
+            <FacebookMessengerShareButton
+              appId=""
+              url={CompanyInfo.FACEBOOK_HOMEPAGE}
+            >
+              <FacebookMessengerIcon size={32} round={true} />
+            </FacebookMessengerShareButton>
           </ItemWrapper>
           <ItemWrapper>
-            <Link to="/">
-              <GoogleOutlined style={{ fontSize: '20px', color: '#08c' }} />
-            </Link>
+            <TelegramShareButton url="">
+              <TelegramIcon size={32} round={true} />
+            </TelegramShareButton>
           </ItemWrapper>
           <ItemWrapper>
-            <Link to="/">
-              <YahooOutlined style={{ fontSize: '20px', color: '#08c' }} />
-            </Link>
+            <TwitterShareButton url={CompanyInfo.FACEBOOK_HOMEPAGE}>
+              <TwitterIcon size={32} round={true} />
+            </TwitterShareButton>
+          </ItemWrapper>
+          <ItemWrapper>
+            <EmailShareButton url={CompanyInfo.FACEBOOK_HOMEPAGE}>
+              <EmailIcon size={32} round={true} />
+            </EmailShareButton>
+          </ItemWrapper>
+          <ItemWrapper>
+            <LinkedinShareButton url={CompanyInfo.FACEBOOK_HOMEPAGE}>
+              <LinkedinIcon size={32} round={true} />
+            </LinkedinShareButton>
+          </ItemWrapper>
+          <ItemWrapper>
+            <ViberShareButton url={CompanyInfo.FACEBOOK_HOMEPAGE}>
+              <ViberIcon size={32} round={true} />
+            </ViberShareButton>
           </ItemWrapper>
         </Space>
       </SocialWrapper>

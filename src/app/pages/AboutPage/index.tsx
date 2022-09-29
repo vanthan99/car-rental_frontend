@@ -30,7 +30,7 @@ export const AboutPage = () => {
       </Helmet>
       <TitleMain name="CHO THUÊ XE Ô TÔ TỰ LÁI ĐÔNG HÀ QUẢNG TRỊ" />
       <Row justify="center">
-        <Col xxl={18} xl={23} lg={23}>
+        <Col xxl={18} xl={23} lg={23} md={23} sm={23} xs={23}>
           <Content>
             <div className="content-main w-clear">
               <h1>
