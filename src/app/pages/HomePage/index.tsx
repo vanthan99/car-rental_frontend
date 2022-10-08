@@ -16,7 +16,6 @@ import { useMediaQuery } from 'react-responsive';
 import Fade from 'react-reveal/Fade';
 import Rotate from 'react-reveal/Rotate';
 import Slide from 'react-reveal/Slide';
-import Slider from 'react-slick';
 import styled from 'styled-components';
 import { styleVariables } from 'styles';
 import { MobilScreenSize } from 'styles/commons';
@@ -117,7 +116,7 @@ export function HomePage() {
             </Row>
             <Row justify="center" gutter={[16, 16]}>
               <Col>
-                <Slider {...slickSettings}>{renderProcedureList}</Slider>
+                {/* <Slider {...slickSettings}>{renderProcedureList}</Slider> */}
               </Col>
             </Row>
           </Col>
