@@ -1,4 +1,4 @@
-import { Col, Row } from 'antd';
+import { Carousel, Col, Image, Row } from 'antd';
 import { CarTypeItem } from 'app/components/CarTypeItem';
 import { CategoryItemTitle } from 'app/components/CategoryItemTitle';
 import { ProcedureItem } from 'app/components/ProcedureItem';
@@ -19,6 +19,7 @@ import Slide from 'react-reveal/Slide';
 import styled from 'styled-components';
 import { styleVariables } from 'styles';
 import { MobilScreenSize } from 'styles/commons';
+import Slider from 'react-slick';
 
 const renderProcedureList = ProcedureListData.map((item, index) => (
   <ProcedureItem {...item} key={index} />
@@ -57,21 +58,9 @@ export function HomePage() {
         <title>{SiteMap.HOME.name}</title>
       </Helmet>
       <Row justify="center">
-        <Col xl={24}>
+        <Col lg={23} xl={23} xxl={18}>
           <Row justify="center" align="middle">
             <Col sm={24}>
-              {/* <p
-                style={{
-                  width: '100%',
-                  height: '300px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  border: '1px solid black',
-                }}
-              >
-                This is slider/banner
-              </p> */}
               <SlideShow />
             </Col>
           </Row>
@@ -116,7 +105,7 @@ export function HomePage() {
             </Row>
             <Row justify="center" gutter={[16, 16]}>
               <Col>
-                {/* <Slider {...slickSettings}>{renderProcedureList}</Slider> */}
+                <Slider {...slickSettings}>{renderProcedureList}</Slider>
               </Col>
             </Row>
           </Col>

@@ -90,13 +90,19 @@ export const Header = () => {
               <Row justify="space-between" align="middle">
                 <Col xl={3}>
                   <ImageWrapper to="/">
-                    <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
+                    <_Image src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/066D02D0-C67A-4A9B-A3DE-97F4DEC6A1C5.jpeg?alt=media&token=70975597-8896-4576-a379-609aeeb6bf14" />
                   </ImageWrapper>
                 </Col>
                 <Col xl={21}>
                   <Row align="middle" justify="end">
                     <Space>
-                      <_NavLink to={HOME.path}>{HOME.name}</_NavLink>
+                      <_NavLink
+                        exact
+                        to={HOME.path}
+                        activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                      >
+                        {HOME.name}
+                      </_NavLink>
                       <_NavLink
                         activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
                         to={ABOUT.path}
@@ -145,7 +151,7 @@ export const Header = () => {
             </Col>
           </Row>
         </DeskTopMenu>
-        <MobileMenu hidden={isMediumScreen ? false : true}>
+        <MobileMenu hidden={isTabletScreen ? false : true}>
           <Row justify="center">
             <Col xs={23} md={23} lg={23}>
               <MobileMenuBar>
@@ -161,7 +167,7 @@ export const Header = () => {
                   )}
                 </_Hamburger>
                 <MobileLogo to="/">
-                  <MobileLogoImage src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/logo-6731.png?alt=media&token=0cb4880a-9733-4af8-8dbb-6f45782fd84c" />
+                  <MobileLogoImage src="https://firebasestorage.googleapis.com/v0/b/carrental-e6f92.appspot.com/o/066D02D0-C67A-4A9B-A3DE-97F4DEC6A1C5.jpeg?alt=media&token=70975597-8896-4576-a379-609aeeb6bf14" />
                 </MobileLogo>
                 <MobileSearchWrapper>
                   <SearchOutlined
@@ -189,7 +195,13 @@ export const Header = () => {
                     onClick={toggleMobileMenu}
                     style={{ justifyContent: 'center' }}
                   >
-                    <_NavLink to={item.path}>{item.name}</_NavLink>
+                    <_NavLink
+                      exact
+                      activeStyle={{ color: styleVariables.TEXT_COLOR_RED }}
+                      to={item.path}
+                    >
+                      {item.name}
+                    </_NavLink>
                   </List.Item>
                 </Roll>
               )}
@@ -213,6 +225,7 @@ const MobileSearchWrapper = styled.div`
 `;
 
 const MobileLogoImage = styled.img`
+  width: 150px;
   opacity: 1;
   transition: opacity 1s;
   max-width: 100%;
@@ -347,6 +360,7 @@ const _Image = styled.img`
   opacity: 1;
 
   max-width: 100%;
+  width: 100%;
   height: auto;
   vertical-align: top;
   border-style: none;
