@@ -3,31 +3,24 @@
  * Share
  *
  */
-import {
-  GoogleOutlined,
-  LinkedinOutlined,
-  TwitterOutlined,
-  YahooOutlined,
-} from '@ant-design/icons';
-import { Col, Row, Space } from 'antd';
+import { Space } from 'antd';
 import { CompanyInfo } from 'app/models';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import {
-  FacebookShareButton,
-  FacebookIcon,
-  EmailShareButton,
-  TelegramShareButton,
-  TelegramIcon,
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon,
   EmailIcon,
-  TwitterShareButton,
-  TwitterIcon,
-  LinkedinShareButton,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookMessengerIcon,
+  FacebookMessengerShareButton,
+  FacebookShareButton,
   LinkedinIcon,
-  ViberShareButton,
+  LinkedinShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TwitterIcon,
+  TwitterShareButton,
   ViberIcon,
+  ViberShareButton,
 } from 'react-share';
 import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
