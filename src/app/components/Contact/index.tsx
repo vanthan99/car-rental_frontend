@@ -3,16 +3,15 @@
  * Contact
  *
  */
-import React, { memo } from 'react';
-import styled from 'styled-components/macro';
-import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
-import { Button, Col, Form, Row, Select, Typography, Input, Space } from 'antd';
-import { Link } from 'react-router-dom';
+import { Button, Col, Form, Input, Row, Select, Space, Typography } from 'antd';
 import TextArea from 'antd/lib/input/TextArea';
+import { CompanyInfo } from 'app/models';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components/macro';
 import { styleVariables } from 'styles';
 import { TitleMain } from '../TitleMain';
-import { CompanyInfo } from 'app/models';
 const { Title, Text, Paragraph } = Typography;
 
 const { Option } = Select;
@@ -160,8 +159,8 @@ export const Contact = () => {
         <Col xs={24} md={24} lg={24} xl={23} xxl={23}>
           <div>
             <iframe
-              style={{ border: 0, width: '100%', height: '270px' }}
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+              style={{ border: 0, width: '100%', height: '400px' }}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.297772457948!2d107.10185361536612!3d16.81157752357959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3140e5890a26ab53%3A0x75a7eb92c3c71e1d!2zMzAgVMO0biBUaOG6pXQgVMO5bmcsIFBoxrDhu51uZyA1LCDEkMO0bmcgSMOgLCBRdeG6o25nIFRy4buLLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1666586452715!5m2!1sen!2s"
               frameBorder={0}
               allowFullScreen
             />
